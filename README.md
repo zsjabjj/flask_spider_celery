@@ -1,0 +1,2 @@
+# flask_spider_celery
+初略的基于flask的异步处理爬虫
