@@ -7,7 +7,7 @@ from inchange_net import redis_store
 from inchange_net.api_v1_0 import api
 from inchange_net.utils.common import login_required
 from inchange_net.utils.response_code import RET
-from inchange_net.api_v1_0.spider_index import panduan
+
 
 mideaList = list()
 tamllList = list()

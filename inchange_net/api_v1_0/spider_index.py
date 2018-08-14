@@ -14,11 +14,12 @@ from inchange_net.utils.common import login_required, getFiles, date_judge
 # cookie值保存
 from inchange_net.utils.response_code import RET
 # from manager import panduan
-from celery_tasks.tasks import panduan
+from celery_tasks.tasks import sanyo_spider
 
 COOKIE = ''
 date_type = ''
 partnerName = ''
+date_time = ''
 
 # @celery.task
 # def panduan():
@@ -33,35 +34,12 @@ def tmall():
 # 三洋进度条页面
 @api.route('/partners/sanyo', methods=['GET',])
 def sanyo():
-    panduan.delay(COOKIE)
+    sanyo_spider.delay(COOKIE, date_time, date_type)
     if redis_store.exists('sanyo'):
         return jsonify(status=RET.OK, partner='三洋')
     else:
         return jsonify(status=RET.NODATA)
-    # return jsonify(status=RET.OK, partner='三洋')
-    # return jsonify({'Location': url_for('sanyos', task_id=task.id)})
 
-    # a = BrandRatio(COOKIE).run()
-    # b = panduan('sanyo')
-    # return b
-    # p = subprocess.Popen("python {}brand_ratio.py '{}'".format(constants.BASE_DIR + '/inchange_net/utils/', COOKIE), shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    # while p.poll() is None:
-    #     line = p.stdout.readline()
-    #     line = line.strip()
-    #     if line:
-    #         try:
-    #             print(eval(line))
-    #             print(type(eval(line)))
-    #             print(len(eval(line)))
-    #             sanyoList = eval(line)
-    #         except:
-    #             pass
-    # return render_template('sanyo.html', partner='三洋')
-    # time.sleep(0.5)
-    # if redis_store.exists('sanyo'):
-    #     return jsonify(status=RET.OK, partner='三洋')
-    # else:
-    #     return jsonify(status=RET.NODATA)
 
 # 美的进度条页面
 @api.route('/partners/midea', methods=['GET',])
@@ -76,6 +54,7 @@ def spider_index():
     '''首页'''
     global COOKIE
     global date_type
+    global date_time
     # 1. 判断请求方式是post
     if request.method == 'POST':
         # 接收ajax发送的数据
@@ -122,6 +101,7 @@ def spider_index():
         else:
             COOKIE = cookie
             date_type = dateType
+            date_time = dateTime
             logging.info(COOKIE)
             return jsonify(status=RET.OK, msg=partner_name)
 	
@@ -137,6 +117,12 @@ def down_page():
         data_dict = request.get_json()
         # print(data_dict)
         partnerName = data_dict.get('partner')
+        # if '三洋' == partnerName:
+        #     pass
+        # elif '美的' == partnerName:
+        #     pass
+        # elif '猫超' == partnerName:
+        #     pass
         # print('-----------', partner_name)
         return jsonify(msg=1)
 

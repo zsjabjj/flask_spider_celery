@@ -19,7 +19,10 @@ from config import Config
 class BrandRatio(object):
     '''使用多线程获取数据, 用到队列queue存放需要执行的操作'''
 
-    def __init__(self, cookie_str):
+    def __init__(self, cookie_str, date_time, date_type):
+        '''初始化'''
+        self.date_time = date_time
+        self.date_type = date_type
 
         try:
             redis_store.delete('sanyo')
@@ -30,7 +33,6 @@ class BrandRatio(object):
         # 构建存储数据列表
         self._list = list()
         self._list.append('ratio开始采集')
-        # Config.SESSION_REDIS.rpush('sanyo', 'ratio开始采集')
         try:
             redis_store.rpush('sanyo', 'ratio开始采集')
         except:
@@ -42,27 +44,28 @@ class BrandRatio(object):
             'Referer': 'https://sycm.taobao.com/mq/industry/brand/detail.htm?spm=a21ag.7749233.0.0.47564710CpQrAv',
         }
 
-        # 保存数据文件
-        # self.f = open('qiushi.json', 'w', encoding='UTF-8')
-
         # 创建存放需要执行操作的事件
         self.url_queue = Queue()
         self.resp_queue = Queue()
         # self.data_queue = Queue()
 
-    # def __del__(self):
-    #     self.f.close()
-
     def generate_url_list(self):
         '''构建url'''
 
         for i in ['1', '4']:
-            # 时间范围
-            start_time, end_time, dateType, index = sanyo_time(i)
-            dateRange = start_time + '%7C' + end_time
-            # print(dateRange)
 
-            # print(dateRange)
+            if 'recent1' == self.date_type:
+                # 时间范围最近一天
+                start_time, end_time, dateType, index = sanyo_time(i)
+                dateRange = start_time + '%7C' + end_time
+            elif 'day' == self.date_type:
+                # 指定日期
+                if '1' == i:
+                    dateRange = self.date_time + '%7C' + self.date_time
+                    dateType = 'day'
+                else:
+                    start_time, end_time, dateType, index = sanyo_time(i)
+                    dateRange = start_time + '%7C' + self.date_time
 
             # 品牌分析
             for cate in CATEIDS:
@@ -173,7 +176,7 @@ class BrandRatio(object):
                     # self.data_queue.put(item_washer)
                     self._list.append(item_washer)
                     redis_store.rpush('sanyo', item_washer)
-                    logging.info(self._list)
+                    # logging.info(self._list)
                     self.resp_queue.task_done()
 
                 else:
@@ -220,7 +223,7 @@ class BrandRatio(object):
                     # self.data_queue.put(item_fridge)
                     self._list.append(item_fridge)
                     redis_store.rpush('sanyo', item_fridge)
-                    logging.info(self._list)
+                    # logging.info(self._list)
                     self.resp_queue.task_done()
 
                 else:
@@ -275,7 +278,7 @@ class BrandRatio(object):
         self._list.append('ratio采集完成请导出')
         redis_store.rpush('sanyo', 'ratio采集完成请导出')
         # print(len(self._list))
-        logging.info(self._list)
+        # logging.info(self._list)
         return self._list
 
 

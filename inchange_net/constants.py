@@ -14,6 +14,9 @@ UPLOAD_DIR = BASE_DIR + "/datas/upload/"
 # 缓存文件路径
 TEMP_DIR = BASE_DIR + "/datas/temp/"
 
+# sanyo dir
+SANYO_DIR = BASE_DIR + '/datas/sanyo/'
+
 # 允许的文件格式
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'csv', 'xlsx', 'xls'}
 

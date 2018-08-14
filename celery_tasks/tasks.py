@@ -4,15 +4,15 @@ import time
 
 from inchange_net import celery
 from inchange_net.utils.brand_ratio import BrandRatio
+from inchange_net.utils.save_ratio import SaveRatio
 
 
-# current_time = str(time.strftime('%Y-%m-%d %H:%M:%S'))
+@celery.task(name='sanyo_spider')
+def sanyo_spider(Cookie, date_time, date_type):
+    '''三洋数据抓取and存储'''
+    file_list = BrandRatio(Cookie, date_time, date_type).run()
+    SaveRatio(date_time).save_ratio_data(file_list)
 
-@celery.task(name='panduan')
-def panduan(Cookie):
-    logging.info('spider start %s' % str(time.strftime('%Y-%m-%d %H:%M:%S')))
-    BrandRatio(Cookie).run()
-    logging.info('spider start %s' % str(time.strftime('%Y-%m-%d %H:%M:%S')))
 
 
 
