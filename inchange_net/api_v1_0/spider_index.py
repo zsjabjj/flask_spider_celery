@@ -33,7 +33,7 @@ def tmall():
 # 三洋进度条页面
 @api.route('/partners/sanyo', methods=['GET',])
 def sanyo():
-    task = panduan.delay(COOKIE)
+    panduan.delay(COOKIE)
     if redis_store.exists('sanyo'):
         return jsonify(status=RET.OK, partner='三洋')
     else:

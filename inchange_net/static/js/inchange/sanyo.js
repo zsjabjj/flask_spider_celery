@@ -27,6 +27,10 @@ function file_page() {
 }
 
 function bars() {
+
+    var meter = document.querySelector('.meter');
+    var ok = document.querySelector('#ok');
+    var run = document.querySelector('.run');
     //每隔一段时间请求一次后台
 
     var timeid = setInterval(function () {
@@ -38,8 +42,11 @@ function bars() {
             type: 'get', //请求方式
             dataType: 'json', //后台返回数据格式json
             success: function (info) {
+                console.log(info.time);
                 run.style.width = (100 - info.time) + '%';
                 meter.innerHTML = info.time;
+                console.log(run.style.width);
+                console.log(meter.innerHTML);
                 // alert(info.time);
                 if (info.time == 100) {
                     //改变小圆点span-after的背景颜色

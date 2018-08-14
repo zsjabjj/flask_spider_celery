@@ -8,8 +8,6 @@ from celery import Celery
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-
-from celery_tasks import make_celery
 from config import config_dict, Config
 # from flask_wtf.csrf import CSRFProtect
 # from flask_session import Session
@@ -20,11 +18,19 @@ from inchange_net.utils.common import RegexConverter
 # 解决方案: 可以先创建该对象, 在app创建之后, 再设置app
 
 
+app = Flask(__name__)
+
 db = SQLAlchemy()
 
 # csrf = CSRFProtect()
 
-redis_store = None
+# redis_store = None
+
+pool = redis.ConnectionPool(host=Config.REDIS_HOST, port=Config.REDIS_PORT, db=Config.REDIS_DB, decode_responses=True)
+redis_store = redis.Redis(connection_pool=pool)
+
+
+celery = Celery('celery_tasks.tasks', broker=Config.CELERY_BROKER_URL,backend=Config.CELERY_RESULT_BACKEND)
 
 
 # 项目日志
@@ -67,11 +73,12 @@ def create_app(config_name):
     # celery = Celery('manager.celery', broker='redis://{}:{}/{}'.format(Config.REDIS_HOST, Config.REDIS_PORT, Config.REDIS_DB))
     # celery.conf.update(app.config)
 
-    app.config.update(
-        CELERY_BROKER_URL='redis://localhost:6379/10',
-        CELERY_RESULT_BACKEND='redis://localhost:6379/10'
-    )
+    # app.config.update(
+    #     CELERY_BROKER_URL='redis://localhost:6379/10',
+    #     CELERY_RESULT_BACKEND='redis://localhost:6379/10'
+    # )
     # celery = make_celery(app)
+
 
 
     # 创建数据库
@@ -79,9 +86,9 @@ def create_app(config_name):
 
     global redis_store
     # redis, 最优方式是将参数写到配置文件
-    pool = redis.ConnectionPool(host=Config.REDIS_HOST, port=Config.REDIS_PORT, db=Config.REDIS_DB, decode_responses=True)
-    redis_store = redis.Redis(connection_pool=pool)
-    # redis_store = redis.StrictRedis(host=Config.REDIS_HOST, port=Config.REDIS_PORT)
+    # pool = redis.ConnectionPool(host=Config.REDIS_HOST, port=Config.REDIS_PORT, db=Config.REDIS_DB, decode_responses=True)
+    # redis_store = redis.Redis(connection_pool=pool)
+    redis_store = redis.StrictRedis(host=Config.REDIS_HOST, port=Config.REDIS_PORT, db=Config.REDIS_DB)
 
     # 给app的路由转换器字典增加我们自定义的转换器
     app.url_map.converters['re'] = RegexConverter
@@ -95,7 +102,7 @@ def create_app(config_name):
     # 创建能够将默认存放在cookie的sesion数据, 转移到redis的对象
     # http://pythonhosted.org/Flask-Session/
     # Session(app)
-
+    celery.conf.update(app.config)
     # from flask_bootstrap import Bootstrap
     # Bootstrap(app)
 
@@ -105,7 +112,8 @@ def create_app(config_name):
     from inchange_net.api_v1_0 import api
     app.register_blueprint(api, url_prefix='/api/v1_0')
 
-
+    from celery_tasks import celery_tasks as celery_task_blueprint
+    app.register_blueprint(celery_task_blueprint)
 
     from inchange_net import web_html
     app.register_blueprint(web_html.static_html)

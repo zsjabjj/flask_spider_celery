@@ -7364,3 +7364,692 @@ INFO _internal.py:88  * Detected change in '/Users/tiger007/Desktop/shell_test/g
 INFO _internal.py:88  * Restarting with stat
 WARNING _internal.py:88  * Debugger is active!
 INFO _internal.py:88  * Debugger PIN: 302-888-115
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88  * Restarting with stat
+WARNING _internal.py:88  * Debugger is active!
+INFO _internal.py:88  * Debugger PIN: 302-888-115
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:46:36] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:46:37] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:46:37] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:46:37] "GET /static/css/reset.css HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:46:37] "GET /static/css/inchange/index_style.css HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:46:37] "GET /static/js/inchange/base_index.js HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:46:37] "GET /static/css/inchange/nav_gv.png HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:46:37] "GET /static/favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:46:38] "GET /spider_index.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:46:39] "GET /static/css/inchange/index.css HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:46:39] "GET /static/js/inchange/index.js HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:46:39] "GET /static/js/inchange/canvas-particle.js HTTP/1.1" 304 -
+INFO spider_index.py:125 t=353065b89f6de4884ac4996fe6b330f1; cna=p06hE64hcF0CAXARX/O1H59e; thw=cn; hng=CN%7Czh-CN%7CCNY%7C156; ali_ab=112.17.95.243.1528785183954.3; enc=z114ehbR5%2FL9evDLdagORWxBZKBgR1H5rjGcjfUtKap6zDBWL1gNz5N%2B%2FlU5wPCdN6AacSoQ5vdYP8d7o%2FlkaQ%3D%3D; tg=0; cookie2=120f0d52b7bc698f691dc3dd99cd8031; _tb_token_=e6615ae74e631; _m_h5_tk=025eeae07bf43f59a1fff87a72b4e4a6_1533622905011; _m_h5_tk_enc=90e3c1ae4fa4d6e370d4acb9556f034f; l=AldXf48MNrthOrrnjne4vxbqZ8Ch3Sv4; _cc_=VT5L2FSpdA%3D%3D; mt=ci=0_0; JSESSIONID=19352DBC4091E094E2A21F54982947B2; x=761383686; uc3=id2=&nk2=&lg2=; uc1=cookie14=UoTfL8iPzrna5g%3D%3D&lng=zh_CN; skt=f1beb8f65e098ddc; sn=%E4%B8%89%E6%B4%8B%E5%AE%98%E6%96%B9%E6%97%97%E8%88%B0%E5%BA%97%3A%E6%95%B0%E6%8D%AE%E7%BB%84; unb=3789122802; tracknick=; csg=d83ab526; _euacm_ac_l_uid_=3789122802; 3789122802_euacm_ac_c_uid_=761383686; 3789122802_euacm_ac_rs_uid_=761383686; _euacm_ac_rs_sid_=68898854; v=0; _portal_version_=new; isg=BHd3GGvj4Dwh6mTi1P2Oiv4CBm0BlBOKN4Wcc8kkk8ateJe60Qzb7jXeXpiDkCMW
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:33] "POST /api/v1_0/spiders HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:34] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:34] "GET /static/css/inchange/sanyo.css HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:34] "GET /static/js/jquery.min.js HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:34] "GET /static/js/inchange/sanyo.js HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:34] "GET /static/css/inchange/jdt.css HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:34] "GET /static/js/jquery.js HTTP/1.1" 304 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:36] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:36] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:36] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:36] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:36] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:37] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:37] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:37] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:38] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:38] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:38] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:38] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:39] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:39] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:39] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:39] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:40] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:40] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:40] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:40] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:41] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:41] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:42] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:42] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:47:42] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88  * Detected change in '/Users/tiger007/Desktop/shell_test/gitCodes/flask_spider_celery/inchange_net/__init__.py', reloading
+INFO _internal.py:88  * Restarting with stat
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88  * Restarting with stat
+WARNING _internal.py:88  * Debugger is active!
+INFO _internal.py:88  * Debugger PIN: 302-888-115
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:05] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:05] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:05] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:05] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:06] "GET /static/css/inchange/index_style.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:06] "GET /static/js/inchange/base_index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:06] "GET /static/css/inchange/nav_gv.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:07] "GET /spider_index.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:07] "GET /static/css/inchange/index.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:07] "GET /static/js/inchange/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:07] "GET /static/js/inchange/canvas-particle.js HTTP/1.1" 200 -
+INFO spider_index.py:125 t=353065b89f6de4884ac4996fe6b330f1; cna=p06hE64hcF0CAXARX/O1H59e; thw=cn; hng=CN%7Czh-CN%7CCNY%7C156; ali_ab=112.17.95.243.1528785183954.3; enc=z114ehbR5%2FL9evDLdagORWxBZKBgR1H5rjGcjfUtKap6zDBWL1gNz5N%2B%2FlU5wPCdN6AacSoQ5vdYP8d7o%2FlkaQ%3D%3D; tg=0; cookie2=120f0d52b7bc698f691dc3dd99cd8031; _tb_token_=e6615ae74e631; _m_h5_tk=025eeae07bf43f59a1fff87a72b4e4a6_1533622905011; _m_h5_tk_enc=90e3c1ae4fa4d6e370d4acb9556f034f; l=AldXf48MNrthOrrnjne4vxbqZ8Ch3Sv4; _cc_=VT5L2FSpdA%3D%3D; mt=ci=0_0; JSESSIONID=19352DBC4091E094E2A21F54982947B2; x=761383686; uc3=id2=&nk2=&lg2=; uc1=cookie14=UoTfL8iPzrna5g%3D%3D&lng=zh_CN; skt=f1beb8f65e098ddc; sn=%E4%B8%89%E6%B4%8B%E5%AE%98%E6%96%B9%E6%97%97%E8%88%B0%E5%BA%97%3A%E6%95%B0%E6%8D%AE%E7%BB%84; unb=3789122802; tracknick=; csg=d83ab526; _euacm_ac_l_uid_=3789122802; 3789122802_euacm_ac_c_uid_=761383686; 3789122802_euacm_ac_rs_uid_=761383686; _euacm_ac_rs_sid_=68898854; v=0; _portal_version_=new; apush5c48dd3143d776cb78e4029d2ce08194=%7B%22ts%22%3A1534211815172%2C%22parentId%22%3A1534211243636%7D; isg=BElJhcnJdooh3QqsNsc4nLxIWHNjPmXctR8yPeu-1TBvMmlEM-TCmbukcNYhatUA
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:13] "POST /api/v1_0/spiders HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:13] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:13] "GET /static/css/inchange/jdt.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:13] "GET /static/css/inchange/sanyo.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:13] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:13] "GET /static/js/jquery.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:13] "GET /static/js/inchange/sanyo.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:13] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:14] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:14] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:14] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:14] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:14] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:14] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:15] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:15] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:15] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:16] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:16] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 09:57:16] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88  * Restarting with stat
+WARNING _internal.py:88  * Debugger is active!
+INFO _internal.py:88  * Debugger PIN: 302-888-115
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:02] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:02] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:02] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:03] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:03] "GET /static/css/inchange/index_style.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:03] "GET /static/js/inchange/base_index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:03] "GET /static/css/inchange/nav_gv.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:09] "GET /spider_index.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:09] "GET /static/css/inchange/index.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:09] "GET /static/js/inchange/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:10] "GET /static/js/inchange/canvas-particle.js HTTP/1.1" 200 -
+INFO spider_index.py:125 t=353065b89f6de4884ac4996fe6b330f1; cna=p06hE64hcF0CAXARX/O1H59e; thw=cn; hng=CN%7Czh-CN%7CCNY%7C156; ali_ab=112.17.95.243.1528785183954.3; enc=z114ehbR5%2FL9evDLdagORWxBZKBgR1H5rjGcjfUtKap6zDBWL1gNz5N%2B%2FlU5wPCdN6AacSoQ5vdYP8d7o%2FlkaQ%3D%3D; tg=0; cookie2=120f0d52b7bc698f691dc3dd99cd8031; _tb_token_=e6615ae74e631; _m_h5_tk=025eeae07bf43f59a1fff87a72b4e4a6_1533622905011; _m_h5_tk_enc=90e3c1ae4fa4d6e370d4acb9556f034f; l=AldXf48MNrthOrrnjne4vxbqZ8Ch3Sv4; _cc_=VT5L2FSpdA%3D%3D; mt=ci=0_0; JSESSIONID=19352DBC4091E094E2A21F54982947B2; x=761383686; uc3=id2=&nk2=&lg2=; uc1=cookie14=UoTfL8iPzrna5g%3D%3D&lng=zh_CN; skt=f1beb8f65e098ddc; sn=%E4%B8%89%E6%B4%8B%E5%AE%98%E6%96%B9%E6%97%97%E8%88%B0%E5%BA%97%3A%E6%95%B0%E6%8D%AE%E7%BB%84; unb=3789122802; tracknick=; csg=d83ab526; _euacm_ac_l_uid_=3789122802; 3789122802_euacm_ac_c_uid_=761383686; 3789122802_euacm_ac_rs_uid_=761383686; _euacm_ac_rs_sid_=68898854; v=0; _portal_version_=new; apush5c48dd3143d776cb78e4029d2ce08194=%7B%22ts%22%3A1534212580247%2C%22parentId%22%3A1534211243636%7D; isg=BOvrlh-_NEBQoWjGIDG6JhKGegkVqKeWa4GQV11o1yqB_Ate5dIA0wWaUnw3XFd6
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:23] "POST /api/v1_0/spiders HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:23] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:23] "GET /static/css/inchange/jdt.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:23] "GET /static/css/inchange/sanyo.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:23] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:23] "GET /static/js/jquery.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:23] "GET /static/js/inchange/sanyo.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:24] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:24] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:24] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:24] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:24] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:24] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:25] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:25] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:25] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:25] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:26] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:26] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:10:26] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88  * Detected change in '/Users/tiger007/Desktop/shell_test/gitCodes/flask_spider_celery/celery_tasks/tasks.py', reloading
+INFO _internal.py:88  * Restarting with stat
+WARNING _internal.py:88  * Debugger is active!
+INFO _internal.py:88  * Debugger PIN: 302-888-115
+INFO _internal.py:88  * Detected change in '/Users/tiger007/Desktop/shell_test/gitCodes/flask_spider_celery/celery_tasks/tasks.py', reloading
+INFO _internal.py:88  * Restarting with stat
+WARNING _internal.py:88  * Debugger is active!
+INFO _internal.py:88  * Debugger PIN: 302-888-115
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:17] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:18] "GET /spider_index.html HTTP/1.1" 200 -
+INFO spider_index.py:125 t=353065b89f6de4884ac4996fe6b330f1; cna=p06hE64hcF0CAXARX/O1H59e; thw=cn; hng=CN%7Czh-CN%7CCNY%7C156; ali_ab=112.17.95.243.1528785183954.3; enc=z114ehbR5%2FL9evDLdagORWxBZKBgR1H5rjGcjfUtKap6zDBWL1gNz5N%2B%2FlU5wPCdN6AacSoQ5vdYP8d7o%2FlkaQ%3D%3D; tg=0; cookie2=120f0d52b7bc698f691dc3dd99cd8031; _tb_token_=e6615ae74e631; _m_h5_tk=025eeae07bf43f59a1fff87a72b4e4a6_1533622905011; _m_h5_tk_enc=90e3c1ae4fa4d6e370d4acb9556f034f; l=AldXf48MNrthOrrnjne4vxbqZ8Ch3Sv4; _cc_=VT5L2FSpdA%3D%3D; mt=ci=0_0; JSESSIONID=19352DBC4091E094E2A21F54982947B2; x=761383686; uc3=id2=&nk2=&lg2=; uc1=cookie14=UoTfL8iPzrna5g%3D%3D&lng=zh_CN; skt=f1beb8f65e098ddc; sn=%E4%B8%89%E6%B4%8B%E5%AE%98%E6%96%B9%E6%97%97%E8%88%B0%E5%BA%97%3A%E6%95%B0%E6%8D%AE%E7%BB%84; unb=3789122802; tracknick=; csg=d83ab526; _euacm_ac_l_uid_=3789122802; 3789122802_euacm_ac_c_uid_=761383686; 3789122802_euacm_ac_rs_uid_=761383686; _euacm_ac_rs_sid_=68898854; v=0; _portal_version_=new; apush5c48dd3143d776cb78e4029d2ce08194=%7B%22ts%22%3A1534212580247%2C%22parentId%22%3A1534211243636%7D; isg=BOvrlh-_NEBQoWjGIDG6JhKGegkVqKeWa4GQV11o1yqB_Ate5dIA0wWaUnw3XFd6
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:28] "POST /api/v1_0/spiders HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:28] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:29] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:29] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:29] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:30] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:31] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:32] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:33] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:34] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:35] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:36] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:37] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:38] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:39] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:40] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:41] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:42] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:43] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:44] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:45] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:46] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:47] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:48] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:49] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:50] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:51] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:52] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:53] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:54] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:55] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:57] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:58] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:58] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:20:59] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:21:00] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:21:01] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:21:02] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:21:03] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:21:05] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:21:06] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:21:07] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:21:08] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:21:09] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:21:10] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:21:11] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:21:11] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:21:12] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88  * Detected change in '/Users/tiger007/Desktop/shell_test/gitCodes/flask_spider_celery/inchange_net/api_v1_0/prog_bars.py', reloading
+INFO _internal.py:88  * Restarting with stat
+WARNING _internal.py:88  * Debugger is active!
+INFO _internal.py:88  * Debugger PIN: 302-888-115
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:27:52] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:27:54] "GET /spider_index.html HTTP/1.1" 200 -
+INFO spider_index.py:125 t=353065b89f6de4884ac4996fe6b330f1; cna=p06hE64hcF0CAXARX/O1H59e; thw=cn; hng=CN%7Czh-CN%7CCNY%7C156; ali_ab=112.17.95.243.1528785183954.3; enc=z114ehbR5%2FL9evDLdagORWxBZKBgR1H5rjGcjfUtKap6zDBWL1gNz5N%2B%2FlU5wPCdN6AacSoQ5vdYP8d7o%2FlkaQ%3D%3D; tg=0; cookie2=120f0d52b7bc698f691dc3dd99cd8031; _tb_token_=e6615ae74e631; _m_h5_tk=025eeae07bf43f59a1fff87a72b4e4a6_1533622905011; _m_h5_tk_enc=90e3c1ae4fa4d6e370d4acb9556f034f; l=AldXf48MNrthOrrnjne4vxbqZ8Ch3Sv4; _cc_=VT5L2FSpdA%3D%3D; mt=ci=0_0; JSESSIONID=19352DBC4091E094E2A21F54982947B2; x=761383686; uc3=id2=&nk2=&lg2=; uc1=cookie14=UoTfL8iPzrna5g%3D%3D&lng=zh_CN; skt=f1beb8f65e098ddc; sn=%E4%B8%89%E6%B4%8B%E5%AE%98%E6%96%B9%E6%97%97%E8%88%B0%E5%BA%97%3A%E6%95%B0%E6%8D%AE%E7%BB%84; unb=3789122802; tracknick=; csg=d83ab526; _euacm_ac_l_uid_=3789122802; 3789122802_euacm_ac_c_uid_=761383686; 3789122802_euacm_ac_rs_uid_=761383686; _euacm_ac_rs_sid_=68898854; v=0; _portal_version_=new; apush5c48dd3143d776cb78e4029d2ce08194=%7B%22ts%22%3A1534213652128%2C%22parentId%22%3A1534211243636%7D; isg=BPb2dPIIsTOC30WF_eYftce5Ryo4v2JFns491GDf8ll0o5Y9yKUFYNCVvz9qCzJp
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:00] "POST /api/v1_0/spiders HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:00] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:00] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 1
+INFO prog_bars.py:35 b'ratio\xe5\xbc\x80\xe5\xa7\x8b\xe9\x87\x87\xe9\x9b\x86'
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:01] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 4
+INFO prog_bars.py:35 b"{'tradeIndex': 187688, 'payItemCnt': 136, 'payPct': 1435.96, 'payRate': 0.008, 'uv': 78308, 'searchUvCnt': 29932, 'favBuyerCnt': 3336, 'addCartUserCnt': 8172, 'sellerCnt': 146, 'paySellerCnt': 46, 'majorSellerCnt': 23, 'majorItemCnt': 28, 'brand': 'Littleswan/\xe5\xb0\x8f\xe5\xa4\xa9\xe9\xb9\x85', 'cate': 'washer', 'index': '1'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:02] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 4
+INFO prog_bars.py:35 b"{'tradeIndex': 187688, 'payItemCnt': 136, 'payPct': 1435.96, 'payRate': 0.008, 'uv': 78308, 'searchUvCnt': 29932, 'favBuyerCnt': 3336, 'addCartUserCnt': 8172, 'sellerCnt': 146, 'paySellerCnt': 46, 'majorSellerCnt': 23, 'majorItemCnt': 28, 'brand': 'Littleswan/\xe5\xb0\x8f\xe5\xa4\xa9\xe9\xb9\x85', 'cate': 'washer', 'index': '1'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:03] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 7
+INFO prog_bars.py:35 b"{'tradeIndex': 102448, 'payItemCnt': 61, 'payPct': 1048.87, 'payRate': 0.0143, 'uv': 20939, 'searchUvCnt': 8595, 'favBuyerCnt': 921, 'addCartUserCnt': 2126, 'sellerCnt': 87, 'paySellerCnt': 22, 'majorSellerCnt': 14, 'majorItemCnt': 11, 'brand': 'TCL', 'cate': 'washer', 'index': '1'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:04] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 10
+INFO prog_bars.py:35 b"{'tradeIndex': 106403, 'payItemCnt': 43, 'payPct': 1073.29, 'payRate': 0.0155, 'uv': 20250, 'searchUvCnt': 8190, 'favBuyerCnt': 792, 'addCartUserCnt': 2298, 'sellerCnt': 36, 'paySellerCnt': 14, 'majorSellerCnt': 9, 'majorItemCnt': 9, 'brand': 'Leader/\xe7\xbb\x9f\xe5\xb8\x85', 'cate': 'washer', 'index': '1'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:05] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 10
+INFO prog_bars.py:35 b"{'tradeIndex': 106403, 'payItemCnt': 43, 'payPct': 1073.29, 'payRate': 0.0155, 'uv': 20250, 'searchUvCnt': 8190, 'favBuyerCnt': 792, 'addCartUserCnt': 2298, 'sellerCnt': 36, 'paySellerCnt': 14, 'majorSellerCnt': 9, 'majorItemCnt': 9, 'brand': 'Leader/\xe7\xbb\x9f\xe5\xb8\x85', 'cate': 'washer', 'index': '1'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:06] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 13
+INFO prog_bars.py:35 b"{'tradeIndex': 418922, 'payItemCnt': 337, 'payPct': 2108.58, 'payRate': 0.0099, 'uv': 176254, 'searchUvCnt': 70695, 'favBuyerCnt': 7155, 'addCartUserCnt': 16806, 'sellerCnt': 195, 'paySellerCnt': 89, 'majorSellerCnt': 57, 'majorItemCnt': 85, 'brand': 'Haier/\xe6\xb5\xb7\xe5\xb0\x94', 'cate': 'fridge', 'index': '1'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:08] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 16
+INFO prog_bars.py:35 b"{'tradeIndex': 23033, 'payItemCnt': 3, 'payPct': 8293.0, 'payRate': 0.0003, 'uv': 10571, 'searchUvCnt': 3102, 'favBuyerCnt': 316, 'addCartUserCnt': 614, 'sellerCnt': 14, 'paySellerCnt': 3, 'majorSellerCnt': 1, 'majorItemCnt': 1, 'brand': 'Bosch/\xe5\x8d\x9a\xe4\xb8\x96', 'cate': 'fridge', 'index': '1'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:09] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 19
+INFO prog_bars.py:35 b"{'tradeIndex': 0, 'payItemCnt': 0, 'payPct': 0.0, 'payRate': 0.0, 'uv': 13, 'searchUvCnt': 0, 'favBuyerCnt': 0, 'addCartUserCnt': 0, 'sellerCnt': 5, 'paySellerCnt': 0, 'majorSellerCnt': 0, 'majorItemCnt': 0, 'brand': 'DIQUA/\xe5\xb8\x9d\xe5\xba\xa6', 'cate': 'fridge', 'index': '1'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:10] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 19
+INFO prog_bars.py:35 b"{'tradeIndex': 0, 'payItemCnt': 0, 'payPct': 0.0, 'payRate': 0.0, 'uv': 13, 'searchUvCnt': 0, 'favBuyerCnt': 0, 'addCartUserCnt': 0, 'sellerCnt': 5, 'paySellerCnt': 0, 'majorSellerCnt': 0, 'majorItemCnt': 0, 'brand': 'DIQUA/\xe5\xb8\x9d\xe5\xba\xa6', 'cate': 'fridge', 'index': '1'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:11] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 22
+INFO prog_bars.py:35 b"{'tradeIndex': 1313686, 'payItemCnt': 2283, 'payPct': 1422.46, 'payRate': 0.0233, 'uv': 850142, 'searchUvCnt': 386845, 'favBuyerCnt': 35975, 'addCartUserCnt': 79146, 'sellerCnt': 2390, 'paySellerCnt': 576, 'majorSellerCnt': 370, 'majorItemCnt': 611, 'brand': 'Midea/\xe7\xbe\x8e\xe7\x9a\x84', 'cate': 'washer', 'index': '4'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:12] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 24
+INFO prog_bars.py:35 b"{'tradeIndex': 525647, 'payItemCnt': 826, 'payPct': 1757.53, 'payRate': 0.019, 'uv': 164765, 'searchUvCnt': 51605, 'favBuyerCnt': 6093, 'addCartUserCnt': 13616, 'sellerCnt': 872, 'paySellerCnt': 256, 'majorSellerCnt': 135, 'majorItemCnt': 184, 'brand': 'Sanyo/\xe4\xb8\x89\xe6\xb4\x8b', 'cate': 'washer', 'index': '4'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:13] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 25
+INFO prog_bars.py:35 b"{'tradeIndex': 578798, 'payItemCnt': 921, 'payPct': 1105.34, 'payRate': 0.0215, 'uv': 275346, 'searchUvCnt': 109425, 'favBuyerCnt': 10939, 'addCartUserCnt': 24139, 'sellerCnt': 1093, 'paySellerCnt': 276, 'majorSellerCnt': 191, 'majorItemCnt': 175, 'brand': 'TCL', 'cate': 'washer', 'index': '4'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:14] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 28
+INFO prog_bars.py:35 b"{'tradeIndex': 116470, 'payItemCnt': 81, 'payPct': 1616.47, 'payRate': 0.0116, 'uv': 20874, 'searchUvCnt': 12642, 'favBuyerCnt': 462, 'addCartUserCnt': 895, 'sellerCnt': 143, 'paySellerCnt': 31, 'majorSellerCnt': 23, 'majorItemCnt': 18, 'brand': 'Royalstar/\xe8\x8d\xa3\xe4\xba\x8b\xe8\xbe\xbe', 'cate': 'washer', 'index': '4'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:15] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 30
+INFO prog_bars.py:35 b"{'tradeIndex': 2792100, 'payItemCnt': 5188, 'payPct': 2567.46, 'payRate': 0.0186, 'uv': 2291528, 'searchUvCnt': 910729, 'favBuyerCnt': 88362, 'addCartUserCnt': 192975, 'sellerCnt': 2511, 'paySellerCnt': 1203, 'majorSellerCnt': 675, 'majorItemCnt': 1463, 'brand': 'Haier/\xe6\xb5\xb7\xe5\xb0\x94', 'cate': 'fridge', 'index': '4'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:16] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 31
+INFO prog_bars.py:35 b"{'tradeIndex': 1121922, 'payItemCnt': 588, 'payPct': 4632.63, 'payRate': 0.0083, 'uv': 551336, 'searchUvCnt': 233237, 'favBuyerCnt': 17787, 'addCartUserCnt': 37538, 'sellerCnt': 834, 'paySellerCnt': 165, 'majorSellerCnt': 132, 'majorItemCnt': 269, 'brand': 'SIEMENS/\xe8\xa5\xbf\xe9\x97\xa8\xe5\xad\x90', 'cate': 'fridge', 'index': '4'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:17] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 34
+INFO prog_bars.py:35 b"{'tradeIndex': 387542, 'payItemCnt': 131, 'payPct': 6041.87, 'payRate': 0.0044, 'uv': 120705, 'searchUvCnt': 39576, 'favBuyerCnt': 3563, 'addCartUserCnt': 6223, 'sellerCnt': 182, 'paySellerCnt': 44, 'majorSellerCnt': 38, 'majorItemCnt': 73, 'brand': 'Bosch/\xe5\x8d\x9a\xe4\xb8\x96', 'cate': 'fridge', 'index': '4'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:18] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 35
+INFO prog_bars.py:35 b"{'tradeIndex': 52585, 'payItemCnt': 20, 'payPct': 4174.74, 'payRate': 0.0026, 'uv': 9302, 'searchUvCnt': 4308, 'favBuyerCnt': 174, 'addCartUserCnt': 264, 'sellerCnt': 260, 'paySellerCnt': 12, 'majorSellerCnt': 9, 'majorItemCnt': 0, 'brand': 'Whirlpool/\xe6\x83\xa0\xe8\x80\x8c\xe6\xb5\xa6', 'cate': 'fridge', 'index': '4'}"
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:19] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:20] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:21] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:22] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:23] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:24] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:25] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:26] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:27] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:27] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:28] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:29] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:28:30] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88  * Detected change in '/Users/tiger007/Desktop/shell_test/gitCodes/flask_spider_celery/inchange_net/api_v1_0/prog_bars.py', reloading
+INFO _internal.py:88  * Restarting with stat
+WARNING _internal.py:88  * Debugger is active!
+INFO _internal.py:88  * Debugger PIN: 302-888-115
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:22] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:24] "GET /spider_index.html HTTP/1.1" 200 -
+INFO spider_index.py:125 t=353065b89f6de4884ac4996fe6b330f1; cna=p06hE64hcF0CAXARX/O1H59e; thw=cn; hng=CN%7Czh-CN%7CCNY%7C156; ali_ab=112.17.95.243.1528785183954.3; enc=z114ehbR5%2FL9evDLdagORWxBZKBgR1H5rjGcjfUtKap6zDBWL1gNz5N%2B%2FlU5wPCdN6AacSoQ5vdYP8d7o%2FlkaQ%3D%3D; tg=0; cookie2=120f0d52b7bc698f691dc3dd99cd8031; _tb_token_=e6615ae74e631; _m_h5_tk=025eeae07bf43f59a1fff87a72b4e4a6_1533622905011; _m_h5_tk_enc=90e3c1ae4fa4d6e370d4acb9556f034f; l=AldXf48MNrthOrrnjne4vxbqZ8Ch3Sv4; _cc_=VT5L2FSpdA%3D%3D; mt=ci=0_0; JSESSIONID=19352DBC4091E094E2A21F54982947B2; x=761383686; uc3=id2=&nk2=&lg2=; uc1=cookie14=UoTfL8iPzrna5g%3D%3D&lng=zh_CN; skt=f1beb8f65e098ddc; sn=%E4%B8%89%E6%B4%8B%E5%AE%98%E6%96%B9%E6%97%97%E8%88%B0%E5%BA%97%3A%E6%95%B0%E6%8D%AE%E7%BB%84; unb=3789122802; tracknick=; csg=d83ab526; _euacm_ac_l_uid_=3789122802; 3789122802_euacm_ac_c_uid_=761383686; 3789122802_euacm_ac_rs_uid_=761383686; _euacm_ac_rs_sid_=68898854; v=0; _portal_version_=new; apush5c48dd3143d776cb78e4029d2ce08194=%7B%22ts%22%3A1534213652128%2C%22parentId%22%3A1534211243636%7D; isg=BPb2dPIIsTOC30WF_eYftce5Ryo4v2JFns491GDf8ll0o5Y9yKUFYNCVvz9qCzJp
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:28] "POST /api/v1_0/spiders HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:28] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:29] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 1
+INFO prog_bars.py:35 b'ratio\xe5\xbc\x80\xe5\xa7\x8b\xe9\x87\x87\xe9\x9b\x86'
+INFO prog_bars.py:37 2
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:30] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 4
+INFO prog_bars.py:35 b"{'tradeIndex': 306196, 'payItemCnt': 287, 'payPct': 1476.0, 'payRate': 0.012, 'uv': 119370, 'searchUvCnt': 48093, 'favBuyerCnt': 5204, 'addCartUserCnt': 13673, 'sellerCnt': 197, 'paySellerCnt': 84, 'majorSellerCnt': 58, 'majorItemCnt': 72, 'brand': 'Haier/\xe6\xb5\xb7\xe5\xb0\x94', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 10
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:31] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 4
+INFO prog_bars.py:35 b"{'tradeIndex': 306196, 'payItemCnt': 287, 'payPct': 1476.0, 'payRate': 0.012, 'uv': 119370, 'searchUvCnt': 48093, 'favBuyerCnt': 5204, 'addCartUserCnt': 13673, 'sellerCnt': 197, 'paySellerCnt': 84, 'majorSellerCnt': 58, 'majorItemCnt': 72, 'brand': 'Haier/\xe6\xb5\xb7\xe5\xb0\x94', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 10
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:32] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 10
+INFO prog_bars.py:35 b"{'tradeIndex': 62048, 'payItemCnt': 30, 'payPct': 2044.65, 'payRate': 0.0045, 'uv': 14395, 'searchUvCnt': 5866, 'favBuyerCnt': 603, 'addCartUserCnt': 1216, 'sellerCnt': 58, 'paySellerCnt': 17, 'majorSellerCnt': 7, 'majorItemCnt': 4, 'brand': 'Panasonic/\xe6\x9d\xbe\xe4\xb8\x8b', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 25
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:34] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 12
+INFO prog_bars.py:35 b"{'tradeIndex': 418922, 'payItemCnt': 337, 'payPct': 2108.58, 'payRate': 0.0099, 'uv': 176254, 'searchUvCnt': 70695, 'favBuyerCnt': 7155, 'addCartUserCnt': 16806, 'sellerCnt': 195, 'paySellerCnt': 89, 'majorSellerCnt': 57, 'majorItemCnt': 85, 'brand': 'Haier/\xe6\xb5\xb7\xe5\xb0\x94', 'cate': 'fridge', 'index': '1'}"
+INFO prog_bars.py:37 30
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:35] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 16
+INFO prog_bars.py:35 b"{'tradeIndex': 23033, 'payItemCnt': 3, 'payPct': 8293.0, 'payRate': 0.0003, 'uv': 10571, 'searchUvCnt': 3102, 'favBuyerCnt': 316, 'addCartUserCnt': 614, 'sellerCnt': 14, 'paySellerCnt': 3, 'majorSellerCnt': 1, 'majorItemCnt': 1, 'brand': 'Bosch/\xe5\x8d\x9a\xe4\xb8\x96', 'cate': 'fridge', 'index': '1'}"
+INFO prog_bars.py:37 40
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:37] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 19
+INFO prog_bars.py:35 b"{'tradeIndex': 0, 'payItemCnt': 0, 'payPct': 0.0, 'payRate': 0.0, 'uv': 13, 'searchUvCnt': 0, 'favBuyerCnt': 0, 'addCartUserCnt': 0, 'sellerCnt': 5, 'paySellerCnt': 0, 'majorSellerCnt': 0, 'majorItemCnt': 0, 'brand': 'DIQUA/\xe5\xb8\x9d\xe5\xba\xa6', 'cate': 'fridge', 'index': '1'}"
+INFO prog_bars.py:37 47
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:39] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 22
+INFO prog_bars.py:35 b"{'tradeIndex': 1313686, 'payItemCnt': 2283, 'payPct': 1422.46, 'payRate': 0.0233, 'uv': 850142, 'searchUvCnt': 386845, 'favBuyerCnt': 35975, 'addCartUserCnt': 79146, 'sellerCnt': 2390, 'paySellerCnt': 576, 'majorSellerCnt': 370, 'majorItemCnt': 611, 'brand': 'Midea/\xe7\xbe\x8e\xe7\x9a\x84', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 55
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:40] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 25
+INFO prog_bars.py:35 b"{'tradeIndex': 578798, 'payItemCnt': 921, 'payPct': 1105.34, 'payRate': 0.0215, 'uv': 275346, 'searchUvCnt': 109425, 'favBuyerCnt': 10939, 'addCartUserCnt': 24139, 'sellerCnt': 1093, 'paySellerCnt': 276, 'majorSellerCnt': 191, 'majorItemCnt': 175, 'brand': 'TCL', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 62
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:42] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 27
+INFO prog_bars.py:35 b"{'tradeIndex': 536017, 'payItemCnt': 625, 'payPct': 2454.36, 'payRate': 0.0137, 'uv': 169724, 'searchUvCnt': 71380, 'favBuyerCnt': 6375, 'addCartUserCnt': 11924, 'sellerCnt': 747, 'paySellerCnt': 224, 'majorSellerCnt': 87, 'majorItemCnt': 170, 'brand': 'Panasonic/\xe6\x9d\xbe\xe4\xb8\x8b', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 67
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:43] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 28
+INFO prog_bars.py:35 b"{'tradeIndex': 116470, 'payItemCnt': 81, 'payPct': 1616.47, 'payRate': 0.0116, 'uv': 20874, 'searchUvCnt': 12642, 'favBuyerCnt': 462, 'addCartUserCnt': 895, 'sellerCnt': 143, 'paySellerCnt': 31, 'majorSellerCnt': 23, 'majorItemCnt': 18, 'brand': 'Royalstar/\xe8\x8d\xa3\xe4\xba\x8b\xe8\xbe\xbe', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 70
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:44] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 31
+INFO prog_bars.py:35 b"{'tradeIndex': 1121922, 'payItemCnt': 588, 'payPct': 4632.63, 'payRate': 0.0083, 'uv': 551336, 'searchUvCnt': 233237, 'favBuyerCnt': 17787, 'addCartUserCnt': 37538, 'sellerCnt': 834, 'paySellerCnt': 165, 'majorSellerCnt': 132, 'majorItemCnt': 269, 'brand': 'SIEMENS/\xe8\xa5\xbf\xe9\x97\xa8\xe5\xad\x90', 'cate': 'fridge', 'index': '4'}"
+INFO prog_bars.py:37 77
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:45] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 34
+INFO prog_bars.py:35 b"{'tradeIndex': 387542, 'payItemCnt': 131, 'payPct': 6041.87, 'payRate': 0.0044, 'uv': 120705, 'searchUvCnt': 39576, 'favBuyerCnt': 3563, 'addCartUserCnt': 6223, 'sellerCnt': 182, 'paySellerCnt': 44, 'majorSellerCnt': 38, 'majorItemCnt': 73, 'brand': 'Bosch/\xe5\x8d\x9a\xe4\xb8\x96', 'cate': 'fridge', 'index': '4'}"
+INFO prog_bars.py:37 85
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:47] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 36
+INFO prog_bars.py:35 b"{'tradeIndex': 52585, 'payItemCnt': 20, 'payPct': 4174.74, 'payRate': 0.0026, 'uv': 9302, 'searchUvCnt': 4308, 'favBuyerCnt': 174, 'addCartUserCnt': 264, 'sellerCnt': 260, 'paySellerCnt': 12, 'majorSellerCnt': 9, 'majorItemCnt': 0, 'brand': 'Whirlpool/\xe6\x83\xa0\xe8\x80\x8c\xe6\xb5\xa6', 'cate': 'fridge', 'index': '4'}"
+INFO prog_bars.py:37 90
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:48] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO prog_bars.py:37 95
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:49] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO prog_bars.py:37 95
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:51] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO prog_bars.py:37 95
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:53] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO prog_bars.py:37 95
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:55] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO prog_bars.py:37 95
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:57] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO prog_bars.py:37 95
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:29:59] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO prog_bars.py:37 95
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:30:00] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO prog_bars.py:37 95
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:30:02] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO prog_bars.py:37 95
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:30:04] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO prog_bars.py:37 95
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:30:05] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO prog_bars.py:37 95
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:30:05] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO prog_bars.py:37 95
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:30:06] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88  * Detected change in '/Users/tiger007/Desktop/shell_test/gitCodes/flask_spider_celery/inchange_net/api_v1_0/prog_bars.py', reloading
+INFO _internal.py:88  * Restarting with stat
+WARNING _internal.py:88  * Debugger is active!
+INFO _internal.py:88  * Debugger PIN: 302-888-115
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:35:46] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:35:50] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:35:53] "GET /static/css/inchange/nav_gv.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:35:53] "GET /spider_index.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:35:53] "GET /static/css/inchange/index.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:35:53] "GET /static/js/inchange/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:35:53] "GET /static/js/inchange/canvas-particle.js HTTP/1.1" 200 -
+INFO spider_index.py:125 t=353065b89f6de4884ac4996fe6b330f1; cna=p06hE64hcF0CAXARX/O1H59e; thw=cn; hng=CN%7Czh-CN%7CCNY%7C156; ali_ab=112.17.95.243.1528785183954.3; enc=z114ehbR5%2FL9evDLdagORWxBZKBgR1H5rjGcjfUtKap6zDBWL1gNz5N%2B%2FlU5wPCdN6AacSoQ5vdYP8d7o%2FlkaQ%3D%3D; tg=0; cookie2=120f0d52b7bc698f691dc3dd99cd8031; _tb_token_=e6615ae74e631; _m_h5_tk=025eeae07bf43f59a1fff87a72b4e4a6_1533622905011; _m_h5_tk_enc=90e3c1ae4fa4d6e370d4acb9556f034f; l=AldXf48MNrthOrrnjne4vxbqZ8Ch3Sv4; _cc_=VT5L2FSpdA%3D%3D; mt=ci=0_0; JSESSIONID=19352DBC4091E094E2A21F54982947B2; x=761383686; uc3=id2=&nk2=&lg2=; uc1=cookie14=UoTfL8iPzrna5g%3D%3D&lng=zh_CN; skt=f1beb8f65e098ddc; sn=%E4%B8%89%E6%B4%8B%E5%AE%98%E6%96%B9%E6%97%97%E8%88%B0%E5%BA%97%3A%E6%95%B0%E6%8D%AE%E7%BB%84; unb=3789122802; tracknick=; csg=d83ab526; _euacm_ac_l_uid_=3789122802; 3789122802_euacm_ac_c_uid_=761383686; 3789122802_euacm_ac_rs_uid_=761383686; _euacm_ac_rs_sid_=68898854; v=0; _portal_version_=new; apush5c48dd3143d776cb78e4029d2ce08194=%7B%22ts%22%3A1534214159055%2C%22parentId%22%3A1534211243636%7D; isg=BLOz5ReX7Cixo6CuOCny_po-QrEdQB--E-nYv2VQL1IJZNMG7bne-gcyGtQvRJ-i
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:10] "POST /api/v1_0/spiders HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:10] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:10] "GET /static/css/inchange/jdt.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:10] "GET /static/css/inchange/sanyo.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:10] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:10] "GET /static/js/jquery.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:10] "GET /static/js/inchange/sanyo.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:11] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:11] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:11] "GET /static/css/inchange/jdt.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:11] "GET /static/css/inchange/sanyo.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:11] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:11] "GET /static/js/jquery.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:11] "GET /static/js/inchange/sanyo.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:11] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 4
+INFO prog_bars.py:35 b"{'tradeIndex': 175355, 'payItemCnt': 110, 'payPct': 1232.18, 'payRate': 0.0096, 'uv': 67614, 'searchUvCnt': 30030, 'favBuyerCnt': 3136, 'addCartUserCnt': 7309, 'sellerCnt': 184, 'paySellerCnt': 39, 'majorSellerCnt': 26, 'majorItemCnt': 31, 'brand': 'Midea/\xe7\xbe\x8e\xe7\x9a\x84', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 10
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:12] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 7
+INFO prog_bars.py:35 b"{'tradeIndex': 175355, 'payItemCnt': 110, 'payPct': 1232.18, 'payRate': 0.0096, 'uv': 67614, 'searchUvCnt': 30030, 'favBuyerCnt': 3136, 'addCartUserCnt': 7309, 'sellerCnt': 184, 'paySellerCnt': 39, 'majorSellerCnt': 26, 'majorItemCnt': 31, 'brand': 'Midea/\xe7\xbe\x8e\xe7\x9a\x84', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 17
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:13] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 10
+INFO prog_bars.py:35 b"{'tradeIndex': 62549, 'payItemCnt': 40, 'payPct': 1845.79, 'payRate': 0.0046, 'uv': 15940, 'searchUvCnt': 4493, 'favBuyerCnt': 664, 'addCartUserCnt': 1598, 'sellerCnt': 67, 'paySellerCnt': 21, 'majorSellerCnt': 10, 'majorItemCnt': 6, 'brand': 'Sanyo/\xe4\xb8\x89\xe6\xb4\x8b', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 25
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:14] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 13
+INFO prog_bars.py:35 b"{'tradeIndex': 102448, 'payItemCnt': 61, 'payPct': 1048.87, 'payRate': 0.0143, 'uv': 20939, 'searchUvCnt': 8595, 'favBuyerCnt': 921, 'addCartUserCnt': 2126, 'sellerCnt': 87, 'paySellerCnt': 22, 'majorSellerCnt': 14, 'majorItemCnt': 11, 'brand': 'TCL', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 32
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:15] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 19
+INFO prog_bars.py:35 b"{'tradeIndex': 15945, 'payItemCnt': 2, 'payPct': 2700.6, 'payRate': 0.0032, 'uv': 1541, 'searchUvCnt': 894, 'favBuyerCnt': 35, 'addCartUserCnt': 75, 'sellerCnt': 11, 'paySellerCnt': 1, 'majorSellerCnt': 1, 'majorItemCnt': 1, 'brand': 'Royalstar/\xe8\x8d\xa3\xe4\xba\x8b\xe8\xbe\xbe', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 47
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:16] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 22
+INFO prog_bars.py:35 b"{'tradeIndex': 418922, 'payItemCnt': 337, 'payPct': 2108.58, 'payRate': 0.0099, 'uv': 176254, 'searchUvCnt': 70695, 'favBuyerCnt': 7155, 'addCartUserCnt': 16806, 'sellerCnt': 195, 'paySellerCnt': 89, 'majorSellerCnt': 57, 'majorItemCnt': 85, 'brand': 'Haier/\xe6\xb5\xb7\xe5\xb0\x94', 'cate': 'fridge', 'index': '1'}"
+INFO prog_bars.py:37 55
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:17] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 24
+INFO prog_bars.py:35 b"{'tradeIndex': 16851, 'payItemCnt': 4, 'payPct': 3699.0, 'payRate': 0.0022, 'uv': 1792, 'searchUvCnt': 666, 'favBuyerCnt': 55, 'addCartUserCnt': 95, 'sellerCnt': 30, 'paySellerCnt': 3, 'majorSellerCnt': 1, 'majorItemCnt': 0, 'brand': 'Whirlpool/\xe6\x83\xa0\xe8\x80\x8c\xe6\xb5\xa6', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 60
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:18] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 29
+INFO prog_bars.py:35 b"{'tradeIndex': 38536, 'payItemCnt': 10, 'payPct': 3694.0, 'payRate': 0.0018, 'uv': 8967, 'searchUvCnt': 2981, 'favBuyerCnt': 312, 'addCartUserCnt': 579, 'sellerCnt': 36, 'paySellerCnt': 5, 'majorSellerCnt': 3, 'majorItemCnt': 1, 'brand': 'Samsung/\xe4\xb8\x89\xe6\x98\x9f', 'cate': 'fridge', 'index': '1'}"
+INFO prog_bars.py:37 72
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:19] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 32
+INFO prog_bars.py:35 b"{'tradeIndex': 0, 'payItemCnt': 0, 'payPct': 0.0, 'payRate': 0.0, 'uv': 711, 'searchUvCnt': 316, 'favBuyerCnt': 14, 'addCartUserCnt': 14, 'sellerCnt': 20, 'paySellerCnt': 0, 'majorSellerCnt': 0, 'majorItemCnt': 0, 'brand': 'Whirlpool/\xe6\x83\xa0\xe8\x80\x8c\xe6\xb5\xa6', 'cate': 'fridge', 'index': '1'}"
+INFO prog_bars.py:37 80
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:20] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 36
+INFO prog_bars.py:35 b"{'tradeIndex': 0, 'payItemCnt': 0, 'payPct': 0.0, 'payRate': 0.0, 'uv': 13, 'searchUvCnt': 0, 'favBuyerCnt': 0, 'addCartUserCnt': 0, 'sellerCnt': 5, 'paySellerCnt': 0, 'majorSellerCnt': 0, 'majorItemCnt': 0, 'brand': 'DIQUA/\xe5\xb8\x9d\xe5\xba\xa6', 'cate': 'fridge', 'index': '1'}"
+INFO prog_bars.py:37 90
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:22] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 40
+INFO prog_bars.py:35 b"{'tradeIndex': 1373292, 'payItemCnt': 2316, 'payPct': 1742.18, 'payRate': 0.0207, 'uv': 846072, 'searchUvCnt': 361898, 'favBuyerCnt': 33278, 'addCartUserCnt': 73616, 'sellerCnt': 1898, 'paySellerCnt': 596, 'majorSellerCnt': 302, 'majorItemCnt': 603, 'brand': 'Littleswan/\xe5\xb0\x8f\xe5\xa4\xa9\xe9\xb9\x85', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 100
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:23] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 44
+INFO prog_bars.py:35 b"{'tradeIndex': 1004971, 'payItemCnt': 527, 'payPct': 3532.67, 'payRate': 0.0133, 'uv': 372427, 'searchUvCnt': 150648, 'favBuyerCnt': 13927, 'addCartUserCnt': 32763, 'sellerCnt': 791, 'paySellerCnt': 128, 'majorSellerCnt': 111, 'majorItemCnt': 311, 'brand': 'SIEMENS/\xe8\xa5\xbf\xe9\x97\xa8\xe5\xad\x90', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 110
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:24] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 47
+INFO prog_bars.py:35 b"{'tradeIndex': 525647, 'payItemCnt': 826, 'payPct': 1757.53, 'payRate': 0.019, 'uv': 164765, 'searchUvCnt': 51605, 'favBuyerCnt': 6093, 'addCartUserCnt': 13616, 'sellerCnt': 872, 'paySellerCnt': 256, 'majorSellerCnt': 135, 'majorItemCnt': 184, 'brand': 'Sanyo/\xe4\xb8\x89\xe6\xb4\x8b', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 117
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:25] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 51
+INFO prog_bars.py:35 b"{'tradeIndex': 536017, 'payItemCnt': 625, 'payPct': 2454.36, 'payRate': 0.0137, 'uv': 169724, 'searchUvCnt': 71380, 'favBuyerCnt': 6375, 'addCartUserCnt': 11924, 'sellerCnt': 747, 'paySellerCnt': 224, 'majorSellerCnt': 87, 'majorItemCnt': 170, 'brand': 'Panasonic/\xe6\x9d\xbe\xe4\xb8\x8b', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 127
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:25] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 56
+INFO prog_bars.py:35 b"{'tradeIndex': 142688, 'payItemCnt': 94, 'payPct': 3228.85, 'payRate': 0.0072, 'uv': 23946, 'searchUvCnt': 8596, 'favBuyerCnt': 665, 'addCartUserCnt': 1138, 'sellerCnt': 390, 'paySellerCnt': 42, 'majorSellerCnt': 20, 'majorItemCnt': 21, 'brand': 'Whirlpool/\xe6\x83\xa0\xe8\x80\x8c\xe6\xb5\xa6', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 140
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:27] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 59
+INFO prog_bars.py:35 b"{'tradeIndex': 2792100, 'payItemCnt': 5188, 'payPct': 2567.46, 'payRate': 0.0186, 'uv': 2291528, 'searchUvCnt': 910729, 'favBuyerCnt': 88362, 'addCartUserCnt': 192975, 'sellerCnt': 2511, 'paySellerCnt': 1203, 'majorSellerCnt': 675, 'majorItemCnt': 1463, 'brand': 'Haier/\xe6\xb5\xb7\xe5\xb0\x94', 'cate': 'fridge', 'index': '4'}"
+INFO prog_bars.py:37 147
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:36:28] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:88  * Restarting with stat
+WARNING _internal.py:88  * Debugger is active!
+INFO _internal.py:88  * Debugger PIN: 302-888-115
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:40:58] "GET / HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:40:58] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:40:58] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:40:58] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:40:59] "GET /static/css/inchange/index_style.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:40:59] "GET /static/js/inchange/base_index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:40:59] "GET /static/css/inchange/nav_gv.png HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:00] "GET /spider_index.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:00] "GET /static/css/inchange/index.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:00] "GET /static/js/inchange/index.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:00] "GET /static/js/inchange/canvas-particle.js HTTP/1.1" 200 -
+INFO spider_index.py:125 t=353065b89f6de4884ac4996fe6b330f1; cna=p06hE64hcF0CAXARX/O1H59e; thw=cn; hng=CN%7Czh-CN%7CCNY%7C156; ali_ab=112.17.95.243.1528785183954.3; enc=z114ehbR5%2FL9evDLdagORWxBZKBgR1H5rjGcjfUtKap6zDBWL1gNz5N%2B%2FlU5wPCdN6AacSoQ5vdYP8d7o%2FlkaQ%3D%3D; tg=0; cookie2=120f0d52b7bc698f691dc3dd99cd8031; _tb_token_=e6615ae74e631; _m_h5_tk=025eeae07bf43f59a1fff87a72b4e4a6_1533622905011; _m_h5_tk_enc=90e3c1ae4fa4d6e370d4acb9556f034f; l=AldXf48MNrthOrrnjne4vxbqZ8Ch3Sv4; _cc_=VT5L2FSpdA%3D%3D; mt=ci=0_0; JSESSIONID=19352DBC4091E094E2A21F54982947B2; x=761383686; uc3=id2=&nk2=&lg2=; uc1=cookie14=UoTfL8iPzrna5g%3D%3D&lng=zh_CN; skt=f1beb8f65e098ddc; sn=%E4%B8%89%E6%B4%8B%E5%AE%98%E6%96%B9%E6%97%97%E8%88%B0%E5%BA%97%3A%E6%95%B0%E6%8D%AE%E7%BB%84; unb=3789122802; tracknick=; csg=d83ab526; _euacm_ac_l_uid_=3789122802; 3789122802_euacm_ac_c_uid_=761383686; 3789122802_euacm_ac_rs_uid_=761383686; _euacm_ac_rs_sid_=68898854; v=0; _portal_version_=new; apush5c48dd3143d776cb78e4029d2ce08194=%7B%22ts%22%3A1534214416144%2C%22parentId%22%3A1534211243636%7D; isg=BBoaOLY0FWcBLpmZOar7Ycuta8b848YxAlpBqCST5q14l7rRDNrnNfYhYyOuRxa9
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:10] "POST /api/v1_0/spiders HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:10] "GET /sanyo.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:10] "GET /static/css/inchange/jdt.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:10] "GET /static/css/inchange/sanyo.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:10] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:10] "GET /static/js/jquery.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:10] "GET /static/js/inchange/sanyo.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:11] "GET /api/v1_0/partners/sanyo HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 1
+INFO prog_bars.py:35 b'ratio\xe5\xbc\x80\xe5\xa7\x8b\xe9\x87\x87\xe9\x9b\x86'
+INFO prog_bars.py:37 2
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:12] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 4
+INFO prog_bars.py:35 b"{'tradeIndex': 187688, 'payItemCnt': 136, 'payPct': 1435.96, 'payRate': 0.008, 'uv': 78308, 'searchUvCnt': 29932, 'favBuyerCnt': 3336, 'addCartUserCnt': 8172, 'sellerCnt': 146, 'paySellerCnt': 46, 'majorSellerCnt': 23, 'majorItemCnt': 28, 'brand': 'Littleswan/\xe5\xb0\x8f\xe5\xa4\xa9\xe9\xb9\x85', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 10
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:13] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 4
+INFO prog_bars.py:35 b"{'tradeIndex': 187688, 'payItemCnt': 136, 'payPct': 1435.96, 'payRate': 0.008, 'uv': 78308, 'searchUvCnt': 29932, 'favBuyerCnt': 3336, 'addCartUserCnt': 8172, 'sellerCnt': 146, 'paySellerCnt': 46, 'majorSellerCnt': 23, 'majorItemCnt': 28, 'brand': 'Littleswan/\xe5\xb0\x8f\xe5\xa4\xa9\xe9\xb9\x85', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 10
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:14] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 7
+INFO prog_bars.py:35 b"{'tradeIndex': 102448, 'payItemCnt': 61, 'payPct': 1048.87, 'payRate': 0.0143, 'uv': 20939, 'searchUvCnt': 8595, 'favBuyerCnt': 921, 'addCartUserCnt': 2126, 'sellerCnt': 87, 'paySellerCnt': 22, 'majorSellerCnt': 14, 'majorItemCnt': 11, 'brand': 'TCL', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 17
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:15] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 10
+INFO prog_bars.py:35 b"{'tradeIndex': 15945, 'payItemCnt': 2, 'payPct': 2700.6, 'payRate': 0.0032, 'uv': 1541, 'searchUvCnt': 894, 'favBuyerCnt': 35, 'addCartUserCnt': 75, 'sellerCnt': 11, 'paySellerCnt': 1, 'majorSellerCnt': 1, 'majorItemCnt': 1, 'brand': 'Royalstar/\xe8\x8d\xa3\xe4\xba\x8b\xe8\xbe\xbe', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 25
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:16] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 10
+INFO prog_bars.py:35 b"{'tradeIndex': 15945, 'payItemCnt': 2, 'payPct': 2700.6, 'payRate': 0.0032, 'uv': 1541, 'searchUvCnt': 894, 'favBuyerCnt': 35, 'addCartUserCnt': 75, 'sellerCnt': 11, 'paySellerCnt': 1, 'majorSellerCnt': 1, 'majorItemCnt': 1, 'brand': 'Royalstar/\xe8\x8d\xa3\xe4\xba\x8b\xe8\xbe\xbe', 'cate': 'washer', 'index': '1'}"
+INFO prog_bars.py:37 25
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:17] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 13
+INFO prog_bars.py:35 b"{'tradeIndex': 93425, 'payItemCnt': 29, 'payPct': 5262.24, 'payRate': 0.0011, 'uv': 44516, 'searchUvCnt': 17740, 'favBuyerCnt': 1517, 'addCartUserCnt': 3448, 'sellerCnt': 65, 'paySellerCnt': 11, 'majorSellerCnt': 9, 'majorItemCnt': 14, 'brand': 'SIEMENS/\xe8\xa5\xbf\xe9\x97\xa8\xe5\xad\x90', 'cate': 'fridge', 'index': '1'}"
+INFO prog_bars.py:37 32
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:18] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 16
+INFO prog_bars.py:35 b"{'tradeIndex': 23033, 'payItemCnt': 3, 'payPct': 8293.0, 'payRate': 0.0003, 'uv': 10571, 'searchUvCnt': 3102, 'favBuyerCnt': 316, 'addCartUserCnt': 614, 'sellerCnt': 14, 'paySellerCnt': 3, 'majorSellerCnt': 1, 'majorItemCnt': 1, 'brand': 'Bosch/\xe5\x8d\x9a\xe4\xb8\x96', 'cate': 'fridge', 'index': '1'}"
+INFO prog_bars.py:37 40
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:19] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 16
+INFO prog_bars.py:35 b"{'tradeIndex': 23033, 'payItemCnt': 3, 'payPct': 8293.0, 'payRate': 0.0003, 'uv': 10571, 'searchUvCnt': 3102, 'favBuyerCnt': 316, 'addCartUserCnt': 614, 'sellerCnt': 14, 'paySellerCnt': 3, 'majorSellerCnt': 1, 'majorItemCnt': 1, 'brand': 'Bosch/\xe5\x8d\x9a\xe4\xb8\x96', 'cate': 'fridge', 'index': '1'}"
+INFO prog_bars.py:37 40
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:20] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 19
+INFO prog_bars.py:35 b"{'tradeIndex': 0, 'payItemCnt': 0, 'payPct': 0.0, 'payRate': 0.0, 'uv': 13, 'searchUvCnt': 0, 'favBuyerCnt': 0, 'addCartUserCnt': 0, 'sellerCnt': 5, 'paySellerCnt': 0, 'majorSellerCnt': 0, 'majorItemCnt': 0, 'brand': 'DIQUA/\xe5\xb8\x9d\xe5\xba\xa6', 'cate': 'fridge', 'index': '1'}"
+INFO prog_bars.py:37 47
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:21] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 22
+INFO prog_bars.py:35 b"{'tradeIndex': 1313686, 'payItemCnt': 2283, 'payPct': 1422.46, 'payRate': 0.0233, 'uv': 850142, 'searchUvCnt': 386845, 'favBuyerCnt': 35975, 'addCartUserCnt': 79146, 'sellerCnt': 2390, 'paySellerCnt': 576, 'majorSellerCnt': 370, 'majorItemCnt': 611, 'brand': 'Midea/\xe7\xbe\x8e\xe7\x9a\x84', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 55
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:22] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 22
+INFO prog_bars.py:35 b"{'tradeIndex': 1313686, 'payItemCnt': 2283, 'payPct': 1422.46, 'payRate': 0.0233, 'uv': 850142, 'searchUvCnt': 386845, 'favBuyerCnt': 35975, 'addCartUserCnt': 79146, 'sellerCnt': 2390, 'paySellerCnt': 576, 'majorSellerCnt': 370, 'majorItemCnt': 611, 'brand': 'Midea/\xe7\xbe\x8e\xe7\x9a\x84', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 55
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:23] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 25
+INFO prog_bars.py:35 b"{'tradeIndex': 578798, 'payItemCnt': 921, 'payPct': 1105.34, 'payRate': 0.0215, 'uv': 275346, 'searchUvCnt': 109425, 'favBuyerCnt': 10939, 'addCartUserCnt': 24139, 'sellerCnt': 1093, 'paySellerCnt': 276, 'majorSellerCnt': 191, 'majorItemCnt': 175, 'brand': 'TCL', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 62
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:24] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 27
+INFO prog_bars.py:35 b"{'tradeIndex': 623667, 'payItemCnt': 605, 'payPct': 1271.63, 'payRate': 0.0256, 'uv': 229657, 'searchUvCnt': 85751, 'favBuyerCnt': 8949, 'addCartUserCnt': 22950, 'sellerCnt': 468, 'paySellerCnt': 163, 'majorSellerCnt': 110, 'majorItemCnt': 161, 'brand': 'Leader/\xe7\xbb\x9f\xe5\xb8\x85', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 67
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:25] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 28
+INFO prog_bars.py:35 b"{'tradeIndex': 116470, 'payItemCnt': 81, 'payPct': 1616.47, 'payRate': 0.0116, 'uv': 20874, 'searchUvCnt': 12642, 'favBuyerCnt': 462, 'addCartUserCnt': 895, 'sellerCnt': 143, 'paySellerCnt': 31, 'majorSellerCnt': 23, 'majorItemCnt': 18, 'brand': 'Royalstar/\xe8\x8d\xa3\xe4\xba\x8b\xe8\xbe\xbe', 'cate': 'washer', 'index': '4'}"
+INFO prog_bars.py:37 70
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:26] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 31
+INFO prog_bars.py:35 b"{'tradeIndex': 1121922, 'payItemCnt': 588, 'payPct': 4632.63, 'payRate': 0.0083, 'uv': 551336, 'searchUvCnt': 233237, 'favBuyerCnt': 17787, 'addCartUserCnt': 37538, 'sellerCnt': 834, 'paySellerCnt': 165, 'majorSellerCnt': 132, 'majorItemCnt': 269, 'brand': 'SIEMENS/\xe8\xa5\xbf\xe9\x97\xa8\xe5\xad\x90', 'cate': 'fridge', 'index': '4'}"
+INFO prog_bars.py:37 77
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:27] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 33
+INFO prog_bars.py:35 b"{'tradeIndex': 404664, 'payItemCnt': 213, 'payPct': 3445.03, 'payRate': 0.0089, 'uv': 113221, 'searchUvCnt': 37360, 'favBuyerCnt': 3749, 'addCartUserCnt': 6615, 'sellerCnt': 468, 'paySellerCnt': 76, 'majorSellerCnt': 41, 'majorItemCnt': 69, 'brand': 'Samsung/\xe4\xb8\x89\xe6\x98\x9f', 'cate': 'fridge', 'index': '4'}"
+INFO prog_bars.py:37 82
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:28] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 34
+INFO prog_bars.py:35 b"{'tradeIndex': 387542, 'payItemCnt': 131, 'payPct': 6041.87, 'payRate': 0.0044, 'uv': 120705, 'searchUvCnt': 39576, 'favBuyerCnt': 3563, 'addCartUserCnt': 6223, 'sellerCnt': 182, 'paySellerCnt': 44, 'majorSellerCnt': 38, 'majorItemCnt': 73, 'brand': 'Bosch/\xe5\x8d\x9a\xe4\xb8\x96', 'cate': 'fridge', 'index': '4'}"
+INFO prog_bars.py:37 85
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:29] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO prog_bars.py:33 in sanyos
+INFO prog_bars.py:34 38
+INFO prog_bars.py:35 b'ratio\xe9\x87\x87\xe9\x9b\x86\xe5\xae\x8c\xe6\x88\x90\xe8\xaf\xb7\xe5\xaf\xbc\xe5\x87\xba'
+INFO prog_bars.py:37 100
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:30] "GET /api/v1_0/sanyos HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:33] "POST /api/v1_0/downpages HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:33] "GET /down_file.html HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:33] "GET /static/css/inchange/down_file.css HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:33] "GET /static/js/inchange/down_file.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:33] "GET /static/js/inchange/canvas-particle.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:33] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:33] "GET /static/plugins/swiper/js/swiper.jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:33] "GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:33] "GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:34] "GET /static/plugins/swiper/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 -
+INFO _internal.py:88 127.0.0.1 - - [14/Aug/2018 10:41:34] "POST /api/v1_0/getFiles HTTP/1.1" 200 -

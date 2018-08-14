@@ -1,3 +1,5 @@
+import logging
+
 from flask import render_template, jsonify
 
 # from config import SESSION_REDIS
@@ -28,14 +30,11 @@ def tmalls():
 @api.route('/sanyos', methods=['GET',])
 def sanyos():
     '''三洋进度条'''
-
-    i = 100 if 'ratio采集完成请导出' == redis_store.lindex("sanyo", -1) else redis_store.llen('sanyo') * 100 // 40
-    # global sanyoList
-
-    # for i in range(len(sanyoList), 40):
-        # sanyoList.append(i)
-
-        # i = len(sanyoList)* 100 // 40
+    logging.info('in sanyos')
+    logging.info(redis_store.llen('sanyo'))
+    logging.info(redis_store.lindex("sanyo", -1))
+    i = 100 if 'ratio采集完成请导出' == redis_store.lindex("sanyo", -1).decode('utf-8') else redis_store.llen('sanyo') * 100 // 40
+    logging.info(i)
     if i <= 100:
         return jsonify(time=i)
     elif i > 100:

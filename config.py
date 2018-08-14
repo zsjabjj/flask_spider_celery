@@ -13,7 +13,10 @@ class Config(object):
     # Redis
     REDIS_HOST = 'localhost'
     REDIS_PORT = 6379
-    REDIS_DB = 10
+    REDIS_DB = 4
+
+    CELERY_BROKER_URL = 'redis://localhost:6379/10'
+    CELERY_RESULT_BACKEND = 'redis://localhost:6379/10'
 
     # 配置SECREK_KEY
     '''
@@ -28,11 +31,11 @@ class Config(object):
     PERMANENT_SESSION_LIFETIME = 60*60*24  # 单位是秒, 设置session过期的时间
     SESSION_TYPE = 'redis'  # 指定存储session的位置为redis
     SESSION_USE_SIGNER = True  # 对数据进行签名加密, 提高安全性
-    # SESSION_REDIS = redis.StrictRedis(host=REDIS_HOST, port=REDIS_PORT)  # 设置redis的ip和端口
+    SESSION_REDIS = redis.StrictRedis(host=REDIS_HOST, port=REDIS_PORT, db=REDIS_DB)  # 设置redis的ip和端口
     # global SESSION_REDIS
-    POOL = redis.ConnectionPool(host=REDIS_HOST, port=REDIS_PORT, db=REDIS_DB, decode_responses=True)
-
-    SESSION_REDIS = redis.Redis(connection_pool=POOL)
+    # POOL = redis.ConnectionPool(host=REDIS_HOST, port=REDIS_PORT, db=REDIS_DB, decode_responses=True)
+    #
+    # SESSION_REDIS = redis.Redis(connection_pool=POOL)
 
 
 # 上线模式

@@ -12,6 +12,7 @@ from queue import Queue
 from inchange_net import redis_store
 from inchange_net.constants import MY_USER_AGENT_PC, CATEIDS, WASHER_BRANDS, BS_BRANDS, FRIDGE_BRANDS
 from inchange_net.utils.DateRangeAndTimeStamp import time_stamp, sanyo_time
+from config import Config
 
 
 
@@ -29,7 +30,11 @@ class BrandRatio(object):
         # 构建存储数据列表
         self._list = list()
         self._list.append('ratio开始采集')
-        redis_store.rpush('sanyo', 'ratio开始采集')
+        # Config.SESSION_REDIS.rpush('sanyo', 'ratio开始采集')
+        try:
+            redis_store.rpush('sanyo', 'ratio开始采集')
+        except:
+            logging.error(dir(redis_store))
         # 构建headers
         self.headers = {
             # 'User-Agent': random.choice(MY_USER_AGENT_PC),
