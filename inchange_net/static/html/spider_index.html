@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>INCHANGE-数据首页</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/inchange/index.css">
+	<script src="/static/js/inchange/index.js"></script>
+	<script type="text/javascript" src="/static/js/inchange/canvas-particle.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+	<link rel="icon" href="/static/favicon_spider.ico" mce_href="/static/favicon_spider.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/static/favicon_spider.ico" mce_href="/static/favicon_spider.ico" type="image/x-icon">
+
+</head>
+<body>
+<div class="up">
+	<div class="p">
+		<h3>步骤：</h3>
+		<p>1,选择合作商名称</p>
+		<p>2,选择时间(如遇日期输入，注意日期格式)</p>
+		<p>3,输入cookie</p>
+		<p>4,提交</p>
+		<p>5,等待爬取完成，下载文件</p>
+	</div>
+	<h4 class="hzs">合作商：</h4>
+
+	<form>
+<!--		合作商-->
+		<div class="radioPar">
+			<input id="tmallP" class="radioPartner" type="radio" name="partner" value="tmall">
+			<span class="pName1">TMALL</span> 
+
+			<input id="sanyoP" class="radioPartner" type="radio" name="partner" value="sanyo">
+			<span class="pName2">SANYO</span> 
+
+			<input id="mideaP" class="radioPartner" type="radio" name="partner" value="midea">
+			<span class="pName3">MIDEA</span> 
+		</div>
+		
+<!--		日期类型-->
+		<div class="radioDay">
+			<input class="recentDate" type="radio" name="radio_day" value="recent1" checked>
+			<span class="pName">最近一天</span>
+			<input class="diyDate" type="radio" name="radio_day" value="day">
+			<span class="pName">指定日期</span> 
+		</div>
+			
+<!--		日期输入-->
+		<div class="input_date">
+			<span class="pName">输入格式为：2018-01-01的日期</span>
+			<input id="date_time" type="text" name="date_time" value="">
+		</div>
+
+<!--		cookie输入-->
+		<div class="cookie">
+			<span id="input_cookie">Cookie输入:&nbsp;</span>
+			<textarea name="cookie" id="cookie_text" cols="" rows=""></textarea>
+		</div>
+		
+<!--		提交-->
+		<div id="button">
+			<input class="button" type="button" value="提交">
+		</div>	
+	</form>
+</div>
+
+<!-- 背景div -->
+<div id="mydiv" style="height:500px;"></div>
+
+<!-- 模态框 -->
+	<div class="modal-sel"></div>
+	<div class="window">
+		<div class="title">
+			<p>系统提示</p>
+		</div>
+		<div class="content">
+<!--			系统提示-->
+		</div>
+		<div class="foot">
+			<button class="btn btn-success" id="confirm">确认</button>
+			<button class="btn btn-default pull-right" id="cancel">取消</button>
+		</div>
+	</div>
+
+</body>
+</html>
