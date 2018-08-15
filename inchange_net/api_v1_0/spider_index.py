@@ -1,20 +1,16 @@
 # -*- coding: utf-8 -*-
 import logging
-import subprocess
-import time
-from threading import Thread
 
-from flask import render_template, request, jsonify, url_for
+from flask import render_template, request, jsonify
 
 from inchange_net import constants, redis_store
 from inchange_net.api_v1_0 import api
-from inchange_net.utils.brand_ratio import BrandRatio
-from inchange_net.utils.common import login_required, getFiles, date_judge
+from inchange_net.utils.common import getFiles, date_judge
 
 # cookie值保存
 from inchange_net.utils.response_code import RET
 # from manager import panduan
-from celery_tasks.tasks import sanyo_spider
+from celery_tasks.tasks import sanyo_spider, midea_spider
 
 COOKIE = ''
 date_type = ''
@@ -34,6 +30,7 @@ def tmall():
 # 三洋进度条页面
 @api.route('/partners/sanyo', methods=['GET',])
 def sanyo():
+    '''异步spider'''
     sanyo_spider.delay(COOKIE, date_time, date_type)
     if redis_store.exists('sanyo'):
         return jsonify(status=RET.OK, partner='三洋')
@@ -44,10 +41,12 @@ def sanyo():
 # 美的进度条页面
 @api.route('/partners/midea', methods=['GET',])
 def midea():
-
-    # return render_template('midea.html', partner='美的')
-    return jsonify(status=RET.OK, partner='美的')
-
+    '''异步spider'''
+    midea_spider.delay(COOKIE, date_time, date_type)
+    if redis_store.exists('midea'):
+        return jsonify(status=RET.OK, partner='美的')
+    else:
+        return jsonify(status=RET.NODATA)
 
 @api.route('/spiders', methods=['GET', 'POST'])
 def spider_index():

@@ -3,6 +3,7 @@
 '''
 
 import datetime
+import logging
 import re
 import time
 import calendar
@@ -154,13 +155,13 @@ def __date_judge(date_time):
 
 
 
-def __date_format():
+def __date_format(date_time):
     '''时间格式化为2018-01-01'''
     while True:
         while True:
             # 起始日期
-            startdate = input('请输入起始日期(格式例如 2018-01-01):')
-            status, _ = __date_judge(startdate)
+            # startdate = input('请输入起始日期(格式例如 2018-01-01):')
+            status, _ = __date_judge(date_time)
             if status:
                 break
             else:
@@ -168,76 +169,76 @@ def __date_format():
 
         while True:
             # 截止日期
-            enddate = input('请输入截止日期(格式例如 2018-01-01):')
-            status, _ = __date_judge(enddate)
+            # enddate = input('请输入截止日期(格式例如 2018-01-01):')
+            status, _ = __date_judge(date_time)
             if status:
                 break
             else:
                 continue
 
-        start, end = __diy_time(startdate, enddate)
+        start, end = __diy_time(date_time, date_time)
         if start or end:
             pass
         else:
-            print('日期输入有误，请重新输入！')
+            logging.info('日期输入有误，请重新输入！')
             continue
 
         recent_month, _ = __diy_time(((datetime.date.today() - datetime.timedelta(days=30)).strftime('%Y-%m-%d')), '2018-01-01')
 
         # 判断起止日期是否符合大小要求
         if start > end:
-            print('起始日期大于截止日期，请重新输入！')
+            logging.info('起始日期大于截止日期，请重新输入！')
             continue
         elif start < recent_month:
-            print('日期范围超出最近一月，请重新输入！')
+            logging.info('日期范围超出最近一月，请重新输入！')
             continue
         elif start != end:
-            print('请将起止日期输入一致，请重新输入！')
+            logging.info('请将起止日期输入一致，请重新输入！')
             continue
         else:
             break
 
-    return startdate, enddate
+    return date_time, date_time
 
-# def date_range():
-#     '''dateRange时间范围'''
-#     while True:
-#         print('''
-#         多个模式：
-#             例如今天是2018年02月02日，
-#             1、最近一天的数据
-#             2、最近一周的数据
-#             3、最近一个月中指定某一天：起始日期和截止日期输入一样，例如：2018-01-31
-#             4、本月累计
-#             自然日day 自然周week 自然月month 自定义range 最近一天recent1 最近7天recent7 最近30天recent30
-#
-#         ''')
-#         index = input('请根据您的需求选择模式编号(1 or 2 or 3 or 4):')
-#         if '1' == index:
-#             dateType = 'recent1'
-#             startdate, enddate = __time_range(index)
-#             break
-#         elif '2' == index:
-#             dateType = 'recent7'
-#             startdate, enddate = __time_range(index)
-#             break
-#         elif '3' == index:
-#             dateType = 'day'
-#             startdate, enddate = __date_format()
-#             break
-#         elif '4' == index:
-#             dateType = 'range'
-#             startdate, enddate = __time_range(index)
-#             break
-#         elif '5' == index:
-#             dateType = 'month'
-#             startdate, enddate = __time_range(index)
-#             break
-#         else:
-#             print('编号输入有误，请您重新选择！')
-#             continue
-#
-#     return startdate, enddate, dateType, index
+def date_range(index, date_time):
+    '''dateRange时间范围'''
+    # while True:
+        # print('''
+        # 多个模式：
+        #     例如今天是2018年02月02日，
+        #     1、最近一天的数据
+        #     2、最近一周的数据
+        #     3、最近一个月中指定某一天：起始日期和截止日期输入一样，例如：2018-01-31
+        #     4、本月累计
+        #     自然日day 自然周week 自然月month 自定义range 最近一天recent1 最近7天recent7 最近30天recent30
+        #
+        # ''')
+        # index = input('请根据您的需求选择模式编号(1 or 2 or 3 or 4):')
+    if '1' == index:
+        dateType = 'recent1'
+        startdate, enddate = __time_range(index)
+        # break
+    elif '2' == index:
+        dateType = 'recent7'
+        startdate, enddate = __time_range(index)
+        # break
+    elif '3' == index:
+        dateType = 'day'
+        startdate, enddate = __date_format(date_time)
+        # break
+    elif '4' == index:
+        dateType = 'range'
+        startdate, enddate = __time_range(index)
+        # break
+    elif '5' == index:
+        dateType = 'month'
+        startdate, enddate = __time_range(index)
+        # break
+    # else:
+    #     print('编号输入有误，请您重新选择！')
+        # continue
+
+    return startdate, enddate, dateType, index
 
 def date_range_pre():
     '''时间范围dateRangePre'''
@@ -261,6 +262,21 @@ def sanyo_time(index):
 def date_judge(date_time):
     '''判断日期格式'''
     return __date_judge(date_time)
+
+def dir_time():
+    '''获取当天和过去一天的时间'''
+    # 获取当天的一些日期信息
+    year_t, month_t, day_t = datetime.datetime.today().strftime('%Y,%m,%d').split(',')
+    # 获取前一天的一些日期信息
+    year_y, month_y, day_y = (datetime.date.today() - datetime.timedelta(days=1)).strftime('%Y,%m,%d').split(',')
+    # 获取年
+    Year = year_t if year_t == year_y else year_y
+    # 获取月
+    Month = month_t if month_t == month_y else month_y
+    # 获取日
+    Day = day_y
+
+    return Year, Month, Day, year_t, month_t, day_t
 
 
 

@@ -30,11 +30,11 @@ def tmalls():
 @api.route('/sanyos', methods=['GET',])
 def sanyos():
     '''三洋进度条'''
-    logging.info('in sanyos')
-    logging.info(redis_store.llen('sanyo'))
-    logging.info(redis_store.lindex("sanyo", -1))
+    # logging.info('in sanyos')
+    # logging.info(redis_store.llen('sanyo'))
+    # logging.info(redis_store.lindex("sanyo", -1))
     i = 100 if 'ratio采集完成请导出' == redis_store.lindex("sanyo", -1).decode('utf-8') else redis_store.llen('sanyo') * 100 // 40
-    logging.info(i)
+    # logging.info(i)
     if i <= 100:
         return jsonify(time=i)
     elif i > 100:
@@ -44,13 +44,15 @@ def sanyos():
 @api.route('/mideas', methods=['GET',])
 def mideas():
     '''美的进度条'''
-    
-    global mideaList
 
-    for i in range(len(mideaList), 30):
-        mideaList.append(i)
-
-        i = len(mideaList)* 100 // 30
-
+    # logging.info('in mideas')
+    # logging.info(redis_store.llen('midea'))
+    # logging.info(redis_store.lindex("midea", -1))
+    i = 100 if 'midea采集完成请导出' == redis_store.lindex("midea", -1).decode('utf-8') else redis_store.llen(
+        'midea') * 100 // 13
+    # logging.info(i)
+    if i <= 100:
         return jsonify(time=i)
-    mideaList = list()
+    elif i > 100:
+        return jsonify(time=RET.DATAERR)
+

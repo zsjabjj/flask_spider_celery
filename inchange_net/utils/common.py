@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import datetime
 import calendar
+import logging
 import os
 import re
 
@@ -83,6 +84,20 @@ def generate(filename):
                 if not chunk_data:
                     break
                 yield chunk_data
+
+def generates(dir_path, filename):
+    file_name = filename.encode('latin-1').decode()
+    file_path = dir_path + file_name
+    logging.info(file_path)
+    try:
+        with open(file_path, 'rb+') as r:
+            while True:
+                chunk_data = r.read()
+                if not chunk_data:
+                    break
+                yield chunk_data
+    except:
+        logging.error('%s not found' % file_name)
 
 # 爬虫抓取后的存数据的目录树
 def getFiles(dir):

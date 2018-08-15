@@ -15,7 +15,20 @@ UPLOAD_DIR = BASE_DIR + "/datas/upload/"
 TEMP_DIR = BASE_DIR + "/datas/temp/"
 
 # sanyo dir
-SANYO_DIR = BASE_DIR + '/datas/sanyo/'
+SANYO_DIR = BASE_DIR + '/datas/Data/sanyo/'
+
+# tmall dir
+TMALL_DIR = BASE_DIR + '/datas/Data/tmall/'
+
+# midea
+# midea dir
+MIDEA_DIR = BASE_DIR + '/datas/Data/midea/'
+# 炒锅，煎锅，奶锅，汤锅，蒸锅
+MIDEA_CATEID = ['炒锅/50002804', '煎锅/50004390', '奶锅/50005480', '汤锅/50002808', '蒸锅/50002807']
+MIDEA_INDEXS = ['payPct,payRate,uv,payItemQty']
+
+# sycm dir
+SYCM_DIR = BASE_DIR + '/Sycm'
 
 # 允许的文件格式
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'csv', 'xlsx', 'xls'}
@@ -55,7 +68,7 @@ CATEIDS = [
     {'fridge': 50003881},
 ]
 
-WASHER_BRANDS = ['Haier/海尔', 'Littleswan/小天鹅', 'Midea/美的', 'SIEMENS/西门子', 'Sanyo/三洋', 'TCL', 'Panasonic/松下', 'Leader/统帅', 'Royalstar/荣事达', 'Whirlpool/惠而浦']
+WASHER_BRANDS = ['Haier/海尔', 'Littleswan/小天鹅', 'Midea/美的', 'SIEMENS/西门子', 'Sanyo/三洋', 'TCL', 'Panasonic/松下', 'Leader/统帅', 'Bosch/博世', 'Royalstar/荣事达', 'Whirlpool/惠而浦']
 FRIDGE_BRANDS = ['Haier/海尔', 'SIEMENS/西门子', 'Midea/美的', 'Samsung/三星', 'Bosch/博世', 'Whirlpool/惠而浦', 'Royalstar/荣事达', 'DIQUA/帝度']
 
 # 登录错误次数最大值

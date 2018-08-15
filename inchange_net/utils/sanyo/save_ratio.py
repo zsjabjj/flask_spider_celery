@@ -7,6 +7,7 @@ import os
 import openpyxl
 
 from inchange_net.constants import SANYO_DIR
+from inchange_net.utils.DateRangeAndTimeStamp import dir_time
 
 
 class SaveRatio(object):
@@ -21,18 +22,8 @@ class SaveRatio(object):
             pass
         else:
             self.date_time = (datetime.date.today() - datetime.timedelta(days=1)).strftime('%m月%d日')
-        # 获取当天的一些日期信息
-        year_t, month_t, day_t = datetime.datetime.today().strftime('%Y,%m,%d').split(',')
-        # 获取前一天的一些日期信息
-        year_y, month_y, day_y = (datetime.date.today() - datetime.timedelta(days=1)).strftime('%Y,%m,%d').split(',')
-        # 获取年
-        Year = year_t if year_t == year_y else year_y
-        # 获取月
-        Month = month_t if month_t == month_y else month_y
-        # 获取日
-        Day = day_y
-        # # 某年某月天数，返回是星期（0-6）和天数
-        # _, days = calendar.monthrange(Year, Month)
+        # 获取所需的年月日
+        Year, Month, Day, year_t, month_t, day_t = dir_time()
         # 设置存储目录
         # 前一天
         sanyoDir_y = '{sanyo_dir}sanyo_{year}/sanyo_{month}/sanyo_{day}/'.format(sanyo_dir=SANYO_DIR, year=Year, month=Year + Month, day=Year + Month + Day)
@@ -42,12 +33,14 @@ class SaveRatio(object):
         if os.path.exists(sanyoDir_y):
             pass
         else:
-            os.mkdir(sanyoDir_y)
+            # os.mkdir(sanyoDir_y)
+            os.makedirs(sanyoDir_y)
 
         if os.path.exists(sanyoDir_t):
             pass
         else:
-            os.mkdir(sanyoDir_t)
+            # os.mkdir(sanyoDir_t)
+            os.makedirs(sanyoDir_t)
 
         # for i in range(1, 11):
         # day_time = (datetime.date.today() - datetime.timedelta(days=1)).strftime('%Y%m%d')

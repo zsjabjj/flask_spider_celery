@@ -42,11 +42,11 @@ function bars() {
             type: 'get', //请求方式
             dataType: 'json', //后台返回数据格式json
             success: function (info) {
-                console.log(info.time);
+                // console.log(info.time);
                 run.style.width = (100 - info.time) + '%';
                 meter.innerHTML = info.time;
-                console.log(run.style.width);
-                console.log(meter.innerHTML);
+                // console.log(run.style.width);
+                // console.log(meter.innerHTML);
                 // alert(info.time);
                 if (info.time == 100) {
                     //改变小圆点span-after的背景颜色
@@ -69,9 +69,9 @@ function bars() {
 // WRITTEN BY TRUMAN HEBERLE
 window.onload = function () {
     'use strict';
-    var meter = document.querySelector('.meter');
-    var ok = document.querySelector('#ok');
-    var run = document.querySelector('.run');
+    // var meter = document.querySelector('.meter');
+    // var ok = document.querySelector('#ok');
+    // var run = document.querySelector('.run');
     // var partner = document.querySelector('.partner');
     // var after = document.querySelector('.run .after');
 
