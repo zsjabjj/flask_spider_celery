@@ -30,7 +30,7 @@ pool = redis.ConnectionPool(host=Config.REDIS_HOST, port=Config.REDIS_PORT, db=C
 redis_store = redis.Redis(connection_pool=pool)
 
 
-celery = Celery('celery_tasks.tasks', broker=Config.CELERY_BROKER_URL,backend=Config.CELERY_RESULT_BACKEND)
+celery_task = Celery('celery_tasks.tasks', broker=Config.CELERY_BROKER_URL,backend=Config.CELERY_RESULT_BACKEND)
 
 
 # 项目日志
@@ -102,7 +102,7 @@ def create_app(config_name):
     # 创建能够将默认存放在cookie的sesion数据, 转移到redis的对象
     # http://pythonhosted.org/Flask-Session/
     # Session(app)
-    celery.conf.update(app.config)
+    celery_task.conf.update(app.config)
     # from flask_bootstrap import Bootstrap
     # Bootstrap(app)
 

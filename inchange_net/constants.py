@@ -19,6 +19,10 @@ SANYO_DIR = BASE_DIR + '/datas/Data/sanyo/'
 
 # tmall dir
 TMALL_DIR = BASE_DIR + '/datas/Data/tmall/'
+# 九阳brandId：30850 美的brandId：30652 苏泊尔brandId：30844
+BRANDIDS = ['30850', '30652', '30844']
+# 猫超品牌型号文件存放路径
+BRAND_DIR = BASE_DIR + "/utils/"
 
 # midea
 # midea dir

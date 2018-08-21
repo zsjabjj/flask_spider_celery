@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import datetime
 import json
 import logging
 import random
@@ -10,13 +11,13 @@ from queue import Queue
 
 # sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 from inchange_net import redis_store
-from inchange_net.constants import MY_USER_AGENT_PC, CATEIDS, WASHER_BRANDS, BS_BRANDS, FRIDGE_BRANDS
-from inchange_net.utils.DateRangeAndTimeStamp import time_stamp, sanyo_time
+from inchange_net import constants
+from inchange_net.utils.DateRangeAndTimeStamp import time_stamp, sanyo_time, date_range
 from config import Config
+from inchange_net.utils.FileToDict import file_dict
 
 
-
-class BrandRatio(object):
+class TmallSpider(object):
     '''使用多线程获取数据, 用到队列queue存放需要执行的操作'''
 
     def __init__(self, cookie_str, date_time, date_type):
@@ -24,90 +25,65 @@ class BrandRatio(object):
         self.date_time = date_time
         self.date_type = date_type
 
+        # 是否指定日期
+        if self.date_time:
+            # 指定日期
+            self.start_time, self.end_time, self.dateType, self.index = self.date_time, self.date_time, 'day', '3'
+            self.dateRange = self.start_time + '%7C' + self.end_time
+            pass
+        else:
+            # 最近一天
+            # self.date_time = date_time
+            # 时间范围
+            self.start_time, self.end_time, self.dateType, self.index = date_range('1', self.date_time)
+            self.dateRange = self.start_time + '%7C' + self.end_time
+            pass
+
+        # 默认时间范围
+        # start_time_pre, end_time_pre = date_range_pre()
+        start_time_pre, end_time_pre, self.dateTypePre, _ = date_range('1', self.date_time)
+        self.dateRangePre = start_time_pre + '%7C' + end_time_pre
+
         try:
-            redis_store.delete('sanyo')
+            redis_store.delete('tmall')
         except Exception as err:
             logging.error(err)
         # 构建url
-        self.base_url = 'https://sycm.taobao.com/mq/brandDetail/getSummary.json?brandId={brandId}&cateId={cateId}&dateRange={dateRange}&dateType={dateType}&device=0&seller=1&token=8a416f30f&_={t}'
+        self.brandListUrl = 'https://sycm.taobao.com/mq/industry/product/product_rank/getRankList.json?brandId={brandId}&cateId=50012082&dateRange={dateRange}&dateType={dateType}&device=0&seller=1&token=f400b7b0f&_={t}'
+        self.itemIdUrl = 'https://sycm.taobao.com/mq/rank/listItem.json?brandId={brandId}&cateId=50012082&categoryId=50012082&dateRange={dateRange}&dateRangePre={dateRangePre}&dateType={dateType}&dateTypePre=recent1&device=0&devicePre=0&itemDetailType=5&keyword=&modelId={modelId}&orderDirection=desc&orderField=payOrdCnt&page=1&pageSize=15&rankTabIndex=0&rankType=1&seller=1&spuId={spuId}&token=f400b7b0f&view=rank&_={t}'
+        self.itemTrendUrl = 'https://sycm.taobao.com/mq/rank/listItemTrend.json?brandId={brandId}&cateId=50012082&categoryId=50012082&dateRange={dateRange}&dateRangePre={dateRangePre}&dateType={dateType}&dateTypePre=recent1&device=0&devicePre=0&indexes=payOrdCnt,payByrRateIndex,payItemQty&itemDetailType=5&itemId={itemId}&latitude=undefined&modelId={modelId}&rankTabIndex=0&rankType=1&seller=1&spuId={spuId}&token=f400b7b0f&view=detail&_={t}'
+        self.itemSrcFlowUrl = 'https://sycm.taobao.com/mq/rank/listItemSrcFlow.json?brandId={brandId}&cateId=50012082&categoryId=50012082&dateRange={dateRange}&dateRangePre={dateRangePre}&dateType={dateType}&dateTypePre={dateTypePre}&device={device}&devicePre=0&itemDetailType=5&itemId={itemId}&modelId={modelId}&rankTabIndex=0&rankType=1&seller=1&spuId={spuId}&token=f400b7b0f&view=detail&_={t}'
+
+        # 建立一个存储列表, 用来存储pc端和无线端的数据
+        self.pw_list = list()
         # 构建存储数据列表
         self._list = list()
-        self._list.append('ratio开始采集')
+        self._list.append('tmall开始采集')
         try:
-            redis_store.rpush('sanyo', 'ratio开始采集')
+            redis_store.rpush('tmall', 'tmall开始采集')
         except:
             logging.error(dir(redis_store))
         # 构建headers
         self.headers = {
             # 'User-Agent': random.choice(MY_USER_AGENT_PC),
             'Cookie': cookie_str,
-            'Referer': 'https://sycm.taobao.com/mq/industry/brand/detail.htm?spm=a21ag.7749233.0.0.47564710CpQrAv',
         }
 
         # 创建存放需要执行操作的事件
         self.url_queue = Queue()
         self.resp_queue = Queue()
-        # self.data_queue = Queue()
+        self.data_queue = Queue()
 
     def generate_url_list(self):
-        '''构建url'''
+        '''构建起始url'''
+        # 构建获取品牌型号以及ID的url
+        for _, brandId in enumerate(constants.BRANDIDS):
+            brand_dict = dict()
+            brand_url = self.brandListUrl.format(brandId=brandId, dateRange=self.dateRange, dateType=self.dateType,t=time_stamp())
+            brand_dict['url'] = brand_url
+            brand_dict['mark'] = 'brandList'
 
-        for i in ['1', '4']:
-
-            if 'recent1' == self.date_type:
-                # 时间范围最近一天
-                start_time, end_time, dateType, index = sanyo_time(i)
-                dateRange = start_time + '%7C' + end_time
-            elif 'day' == self.date_type:
-                # 指定日期
-                if '1' == i:
-                    dateRange = self.date_time + '%7C' + self.date_time
-                    dateType = 'day'
-                else:
-                    start_time, end_time, dateType, index = sanyo_time(i)
-                    dateRange = start_time + '%7C' + self.date_time
-
-            # 品牌分析
-            for cate in CATEIDS:
-                # 洗衣机
-                if 'washer' in cate:
-                    # 品牌分析
-                    for washer in WASHER_BRANDS:
-                        # 传递数据字典
-                        brand_dict = dict()
-
-                        brandId = BS_BRANDS[washer]
-
-                        brand_url = self.base_url.format(brandId=brandId, cateId=cate['washer'], dateRange=dateRange,
-                                                         dateType=dateType, t=time_stamp())
-
-                        brand_dict['url'] = brand_url
-                        brand_dict['cate'] = 'washer'
-                        brand_dict['brand'] = washer
-                        brand_dict['index'] = i
-
-                        self.url_queue.put(brand_dict)
-
-
-                # 冰箱
-                elif 'fridge' in cate:
-                    # 品牌分析
-                    for fridge in FRIDGE_BRANDS:
-                        # 传递数据字典
-
-                        brand_dict = dict()
-
-                        brandId = BS_BRANDS[fridge]
-
-                        brand_url = self.base_url.format(brandId=brandId, cateId=cate['fridge'], dateRange=dateRange,
-                                                         dateType=dateType, t=time_stamp())
-
-                        brand_dict['url'] = brand_url
-                        brand_dict['cate'] = 'fridge'
-                        brand_dict['brand'] = fridge
-                        brand_dict['index'] = i
-
-                        self.url_queue.put(brand_dict)
+            self.url_queue.put(brand_dict)
 
     def get_data(self):
         '''获取数据'''
@@ -118,117 +94,296 @@ class BrandRatio(object):
             # request.headers['proxy'] = 'http://{}'.format(ip)
             proxies = {"http": "http://{}".format(ip)}
             data_dict = self.url_queue.get()
-            self.headers['User-Agent'] = random.choice(MY_USER_AGENT_PC)
-            time.sleep(1)
+            logging.info('__________________________')
+            logging.info(data_dict['mark'])
+            logging.info('===========================')
+            self.headers['User-Agent'] = random.choice(constants.MY_USER_AGENT_PC)
+            # 品牌list
+            if 'brandList' == data_dict['mark']:
+                self.headers[
+                    'Referer'] = 'https://sycm.taobao.com/mq/industry/product/rank.htm?spm=a21ag.7782695.LeftMenu.d320.7ee44653mUqxYv'
+            # itemid list
+            elif 'itemidList' == data_dict['mark']:
+                self.headers[
+                    'Referer'] = 'https://sycm.taobao.com/mq/industry/rank/spu.htm?spm=a21ag.7782686.0.0.3ffb277512wIuF'
+            elif 'trend' == data_dict['mark']:
+                self.headers[
+                    'Referer'] = 'https://sycm.taobao.com/mq/industry/rank/spu.htm?spm=a21ag.7782686.0.0.3ffb277512wIuF'
+            elif 'srcflow' == data_dict['mark']:
+                self.headers[
+                    'Referer'] = 'https://sycm.taobao.com/mq/industry/rank/spu.htm?spm=a21ag.7782686.0.0.3ffb277512wIuF'
+
+            time.sleep(0.2)
             resp = requests.get(data_dict['url'], headers=self.headers, proxies=proxies)
             jsonp = json.loads(resp.text)
+
             # 添加json数据
             data_dict['jsonp'] = jsonp
-            self.resp_queue.put(data_dict)
+            if 'trend' == data_dict['mark'] or 'srcflow' == data_dict['mark']:
+                logging.info('data_queue')
+                logging.info(data_dict['mark'])
+                self.data_queue.put(data_dict)
+            else:
+                logging.info('resp_queue')
+                logging.info(data_dict['mark'])
+                self.resp_queue.put(data_dict)
             self.url_queue.task_done()
 
-    def parse_data(self):
+    def parse_data_one(self):
         '''第一次解析'''
         while self.resp_queue.not_empty:
             data = self.resp_queue.get()
 
             if 'hasError' not in data['jsonp']:
                 logging.error('brand may be cookie error')
-                # 洗衣机品牌
-            elif 'washer' == data['cate']:
-                # print(data['cate'])
 
-                item_washer = dict()
-                washer_dict = data['jsonp']['content']['data']
-                # print(washer_dict)
-                if washer_dict:
-                    # 交易指数tradeIndex 302518
-                    item_washer['tradeIndex'] = washer_dict['tradeIndex']
-                    # 支付商品数payItemCnt 230
-                    item_washer['payItemCnt'] = washer_dict['payItemCnt']
-                    # 客单价payPct 1270.86
-                    item_washer['payPct'] = washer_dict['payPct']
-                    # 支付转化率payRate 0.0224
-                    item_washer['payRate'] = washer_dict['payRate']
-                    # 访客数uv 72997
-                    item_washer['uv'] = washer_dict['uv']
-                    # 搜索点击人数searchUvCnt 29790
-                    item_washer['searchUvCnt'] = washer_dict['searchUvCnt']
-                    # 收藏人数favBuyerCnt 2987
-                    item_washer['favBuyerCnt'] = washer_dict['favBuyerCnt']
-                    # 加购人数addCartUserCnt 6350
-                    item_washer['addCartUserCnt'] = washer_dict['addCartUserCnt']
-                    # 卖家数sellerCnt 390
-                    item_washer['sellerCnt'] = washer_dict['sellerCnt']
-                    # 被支付卖家数paySellerCnt 65
-                    item_washer['paySellerCnt'] = washer_dict['paySellerCnt']
-                    # 重点卖家数majorSellerCnt 44
-                    item_washer['majorSellerCnt'] = washer_dict['majorSellerCnt']
-                    # 重点商品数majorItemCnt 50
-                    item_washer['majorItemCnt'] = washer_dict['majorItemCnt']
-                    # 品牌
-                    item_washer['brand'] = data['brand']
-                    # 分类
-                    item_washer['cate'] = data['cate']
-                    # 每日累计区分
-                    item_washer['index'] = data['index']
+            elif 'brandList' == data['mark']:
+                # 品牌型号列表
+                bm_list = data['jsonp']['content']['data']
 
-                    # self.data_queue.put(item_washer)
-                    self._list.append(item_washer)
-                    redis_store.rpush('sanyo', item_washer)
-                    # logging.info(self._list)
-                    self.resp_queue.task_done()
+                for bm in bm_list:
+                    # 解析得到品牌型号字典
+                    bm_dict, _ = file_dict(bm)
+                    # 用来存储进行下一步的数据
+                    # itemid_dict = dict()
+
+                    if bm_dict:
+                        # 构建获取itemid的url
+                        itemid_url = self.itemIdUrl.format(
+                            brandId=bm_dict['brandId'],
+                            dateRange=self.dateRange,
+                            dateType=self.dateType,
+                            dateRangePre=self.dateRangePre,
+                            modelId=bm_dict['modelId'],
+                            spuId=bm_dict['spuId'],
+                            t=time_stamp()
+                        )
+                        itemid_dict = bm_dict
+                        itemid_dict['url'] = itemid_url
+                        itemid_dict['mark'] = 'itemidList'
+
+                        self.url_queue.put(itemid_dict)
+                self.resp_queue.task_done()
+
+            elif 'itemidList' == data['mark']:
+                itemId_list = data['jsonp']['content']['data']['data']
+                # 判断该商品是否能够查到
+                if not itemId_list:
+                    # 没有查到，直接返回
+                    logging.info('商品没有被查到')
 
                 else:
-                    logging.error('brand may be cookie error')
+                    # 查到
+                    ctmall_list = [itemId for itemId in itemId_list if '天猫超市' == itemId['shopName']]
+                    # 判断是否有猫超
+                    if not ctmall_list:
+                        # 没有猫超
+                        logging.info('没有猫超')
 
-            # 冰箱品牌
-            elif 'fridge' == data['cate']:
-                # print(data['cate'])
-                item_fridge = dict()
-                fridge_dict = data['jsonp']['content']['data']
-                # print(fridge_dict)
-                if fridge_dict:
-                    # 交易指数tradeIndex 302518
-                    item_fridge['tradeIndex'] = fridge_dict['tradeIndex']
-                    # 支付商品数payItemCnt 230
-                    item_fridge['payItemCnt'] = fridge_dict['payItemCnt']
-                    # 客单价payPct 1270.86
-                    item_fridge['payPct'] = fridge_dict['payPct']
-                    # 支付转化率payRate 0.0224
-                    item_fridge['payRate'] = fridge_dict['payRate']
-                    # 访客数uv 72997
-                    item_fridge['uv'] = fridge_dict['uv']
-                    # 搜索点击人数searchUvCnt 29790
-                    item_fridge['searchUvCnt'] = fridge_dict['searchUvCnt']
-                    # 收藏人数favBuyerCnt 2987
-                    item_fridge['favBuyerCnt'] = fridge_dict['favBuyerCnt']
-                    # 加购人数addCartUserCnt 6350
-                    item_fridge['addCartUserCnt'] = fridge_dict['addCartUserCnt']
-                    # 卖家数sellerCnt 390
-                    item_fridge['sellerCnt'] = fridge_dict['sellerCnt']
-                    # 被支付卖家数paySellerCnt 65
-                    item_fridge['paySellerCnt'] = fridge_dict['paySellerCnt']
-                    # 重点卖家数majorSellerCnt 44
-                    item_fridge['majorSellerCnt'] = fridge_dict['majorSellerCnt']
-                    # 重点商品数majorItemCnt 50
-                    item_fridge['majorItemCnt'] = fridge_dict['majorItemCnt']
-                    # 品牌
-                    item_fridge['brand'] = data['brand']
-                    # 分类
-                    item_fridge['cate'] = data['cate']
-                    # 每日累计区分
-                    item_fridge['index'] = data['index']
+                    else:
+                        # 有猫超
+                        logging.info('有猫超')
+                        del data['jsonp']
+                        del data['url']
+                        del data['mark']
+                        logging.info(data)
+                        for _, ctmall in enumerate(ctmall_list):
+                            trend_dict = dict()
+                            srcflow_dict1 = dict()
+                            srcflow_dict2 = dict()
 
-                    # self.data_queue.put(item_fridge)
-                    self._list.append(item_fridge)
-                    redis_store.rpush('sanyo', item_fridge)
-                    # logging.info(self._list)
-                    self.resp_queue.task_done()
+                            # 请求曲线数据
+                            url_trend = self.itemTrendUrl.format(
+                                brandId=data['brandId'],
+                                dateRange=self.dateRange,
+                                dateType=self.dateType,
+                                dateRangePre=self.dateRangePre,
+                                modelId=data['modelId'],
+                                spuId=data['spuId'],
+                                t=time_stamp(),
+                                itemId=ctmall['itemId']
+                            )
+                            trend_dict['modelName'] = data['modelName']
+                            trend_dict['brandName'] = data['brandName']
+                            trend_dict['brandId'] = data['brandId']
+                            trend_dict['spuId'] = data['spuId']
+                            trend_dict['modelId'] = data['modelId']
+                            trend_dict['device_category'] = data['device_category']
+                            trend_dict['url'] = url_trend
+                            trend_dict['mark'] = 'trend'
+                            logging.info('trend insert')
+                            self.url_queue.put(trend_dict)
+                            logging.info('-=-==-=-=-=-=-=-=-=-=-')
 
+                            # 请求流量数据
+
+                            i = 1
+                            url_srcflow1 = self.itemSrcFlowUrl.format(
+                                brandId=data['brandId'],
+                                dateRange=self.dateRange,
+                                dateType=self.dateType,
+                                dateRangePre=self.dateRangePre,
+                                modelId=data['modelId'],
+                                spuId=data['spuId'],
+                                t=time_stamp(),
+                                itemId=ctmall['itemId'],
+                                device=i,
+                                dateTypePre=self.dateTypePre
+                            )
+
+                            srcflow_dict1['modelName'] = data['modelName']
+                            srcflow_dict1['brandName'] = data['brandName']
+                            srcflow_dict1['brandId'] = data['brandId']
+                            srcflow_dict1['spuId'] = data['spuId']
+                            srcflow_dict1['modelId'] = data['modelId']
+                            srcflow_dict1['device_category'] = data['device_category']
+                            srcflow_dict1['itemId'] = ctmall['itemId']
+                            srcflow_dict1['url'] = url_srcflow1
+                            srcflow_dict1['mark'] = 'srcflow'
+                            srcflow_dict1['i'] = i
+                            self.url_queue.put(srcflow_dict1)
+
+                            i = 2
+                            url_srcflow2 = self.itemSrcFlowUrl.format(
+                                brandId=data['brandId'],
+                                dateRange=self.dateRange,
+                                dateType=self.dateType,
+                                dateRangePre=self.dateRangePre,
+                                modelId=data['modelId'],
+                                spuId=data['spuId'],
+                                t=time_stamp(),
+                                itemId=ctmall['itemId'],
+                                device=i,
+                                dateTypePre=self.dateTypePre
+                            )
+
+                            srcflow_dict2['modelName'] = data['modelName']
+                            srcflow_dict2['brandName'] = data['brandName']
+                            srcflow_dict2['brandId'] = data['brandId']
+                            srcflow_dict2['spuId'] = data['spuId']
+                            srcflow_dict2['modelId'] = data['modelId']
+                            srcflow_dict2['device_category'] = data['device_category']
+                            srcflow_dict2['itemId'] = ctmall['itemId']
+                            srcflow_dict2['url'] = url_srcflow2
+                            srcflow_dict2['mark'] = 'srcflow'
+                            srcflow_dict2['i'] = i
+                            self.url_queue.put(srcflow_dict2)
+
+                self.resp_queue.task_done()
+
+    def parse_data_two(self):
+        '''第二次解析，流量和趋势数据'''
+        while self.data_queue.not_empty:
+            data = self.data_queue.get()
+            logging.info('------------------')
+            # logging.info(data)
+            logging.info('+++++++++++++++++++')
+            # 判断返回数据是否正确
+            if 'hasError' not in data['jsonp']:
+                logging.error('may be cookie error')
+            # 曲线趋势
+            elif 'trend' == data['mark']:
+                # 转化率
+                logging.info('曲线趋势')
+                payByrRateIndexList = data['jsonp']['content']['data']['payByrRateIndexList']
+                # 支付订单数
+                payOrdCntList = data['jsonp']['content']['data']['payOrdCntList']
+                # 支付件数
+                payItemQtyList = data['jsonp']['content']['data']['payItemQtyList']
+
+                _1 = len(payByrRateIndexList)
+                _2 = len(payOrdCntList)
+                _3 = len(payItemQtyList)
+
+                if not all([payByrRateIndexList, payOrdCntList, payItemQtyList]):
+                    logging.error('may be cookie error')
+                # 三者数量一致
+                elif _1 == _2 and _2 == _3:
+                    for num in range(_1 - 1, -1, -1):
+                        item = data
+                        item['payByrRateIndex'] = payByrRateIndexList[num]
+                        item['payOrdCnt'] = payOrdCntList[num]
+                        item['payItemQty'] = payItemQtyList[num]
+                        item['date_time'] = (datetime.date.today() - datetime.timedelta(days=_1 - num)).strftime('%Y-%m-%d')
+                        item['total'] = _1
+                        item['num'] = num
+
+                        self._list.append(item)
+                        logging.info('trend ok')
+                        redis_store.rpush('tmall', item)
+                    self.data_queue.task_done()
+
+                # 三者数量不一致
                 else:
-                    logging.error('brand may be cookie error')
+                    for num in range(min(_1, _2, _3) - 1, -1, -1):
+                        item = data
+                        item['payByrRateIndex'] = payByrRateIndexList[num]
+                        item['payOrdCnt'] = payOrdCntList[num]
+                        item['payItemQty'] = payItemQtyList[num]
+                        item['date_time'] = (datetime.date.today() - datetime.timedelta(days=_1 - num)).strftime('%Y-%m-%d')
+                        item['total'] = min(_1, _2, _3)
+                        item['num'] = num
 
+                        self._list.append(item)
+                        logging.info('trend ok')
+                        redis_store.rpush('tmall', item)
+                    self.data_queue.task_done()
+
+            # 流量
+            elif 'srcflow' == data['mark']:
+                logging.info('流量')
+                # pc端
+
+                # logging.info(data)
+                if 1 == data['i']:
+                    pc_list = data['jsonp']['content']['data']
+                    pc_dict = dict()
+                    for _, pc in enumerate(pc_list):
+
+                        pc_dict[pc['pageName']] = pc['uv']
+                    data['pc'] = pc_dict
+
+                    pc_data = data
+                    # print(pc_data)
+                    self.pw_list.append(pc_data)
+                # 无线端
+                elif 2 == data['i']:
+                    wifi_list = data['jsonp']['content']['data']
+                    wifi_dict = dict()
+                    for wifi in wifi_list:
+
+                        wifi_dict[wifi['pageName']] = wifi['uv']
+                    data['wifi'] = wifi_dict
+
+                    wifi_data = data
+
+                    self.pw_list.append(wifi_data)
+
+                for _, pw in enumerate(self.pw_list):
+
+                    for no in range(self.pw_list.index(pw), len(self.pw_list)):
+                        pw_no = self.pw_list[no]
+                        if 'pc' in pw and 'wifi' in pw_no and pw['modelName'] == pw_no['modelName']:
+
+                            item = pw
+                            item['wifi'] = pw_no['wifi']
+                            self.pw_list.pop(self.pw_list.index(pw))
+                            self.pw_list.pop(self.pw_list.index(pw_no))
+
+                            self._list.append(item)
+
+                            redis_store.rpush('tmall', item)
+
+                        elif 'wifi' in pw and 'pc' in pw_no and pw['modelName'] == pw_no['modelName']:
+                            item = pw
+                            item['pc'] = pw_no['pc']
+                            self.pw_list.pop(self.pw_list.index(pw))
+                            self.pw_list.pop(self.pw_list.index(pw_no))
+
+                            self._list.append(item)
+
+                            redis_store.rpush('tmall', item)
+                self.data_queue.task_done()
 
     def run(self):
         '''程序开始'''
@@ -250,13 +405,13 @@ class BrandRatio(object):
         # 创建解析数据的线程
         # print('start parse data')
         for i in range(3):
-            t_parse = threading.Thread(target=self.parse_data)
-            thread_list.append(t_parse)
+            t_parse_one = threading.Thread(target=self.parse_data_one)
+            thread_list.append(t_parse_one)
 
-        # # 创建保存数据的线程
-        # for i in range(3):
-        #     t_save = threading.Thread(target=self.save_data)
-        #     thread_list.append(t_save)
+        # 创建解析流量和趋势数据的线程
+        for i in range(3):
+            t_parse_two = threading.Thread(target=self.parse_data_two)
+            thread_list.append(t_parse_two)
 
         # 开启线程
         # print('start run')
@@ -265,25 +420,25 @@ class BrandRatio(object):
             t.setDaemon(True)
             t.start()
 
-        # sys.stdout.write(str(self._list) + '\n')
-        # sys.stdout.flush()
 
         # 等待子线程结束
-        # print('end run')
-        self.url_queue.join()
-        self.resp_queue.join()
-        # self.data_queue.join()
-        # print('end run')
 
-        self._list.append('ratio采集完成请导出')
-        redis_store.rpush('sanyo', 'ratio采集完成请导出')
-        # print(len(self._list))
-        # logging.info(self._list)
+        self.url_queue.join()
+        logging.info('url queue ok')
+        self.resp_queue.join()
+        logging.info('resp queue ok')
+        self.data_queue.join()
+        logging.info('data queue ok')
+
+
+        self._list.append('tmall采集完成请导出')
+        redis_store.rpush('tmall', 'tmall采集完成请导出')
+
         return self._list
 
 
 if __name__ == '__main__':
     cookie = sys.argv[1]
     # print(cookie)
-    qiushi = BrandRatio(cookie)
+    qiushi = TmallSpider(cookie, '', '')
     qiushi.run()

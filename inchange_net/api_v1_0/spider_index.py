@@ -10,7 +10,7 @@ from inchange_net.utils.common import getFiles, date_judge
 # cookie值保存
 from inchange_net.utils.response_code import RET
 # from manager import panduan
-from celery_tasks.tasks import sanyo_spider, midea_spider
+from celery_tasks.tasks import sanyo_spider, midea_spider, tmall_spider
 
 COOKIE = ''
 date_type = ''
@@ -24,8 +24,12 @@ date_time = ''
 # 猫超进度条页面
 @api.route('/partners/tmall', methods=['GET',])
 def tmall():
-
-    return render_template('tmall.html', partner='猫超')
+    '''异步spider'''
+    tmall_spider.delay(COOKIE, date_time, date_type)
+    if redis_store.exists('tmall'):
+        return jsonify(status=RET.OK, partner='猫超')
+    else:
+        return jsonify(status=RET.NODATA)
 
 # 三洋进度条页面
 @api.route('/partners/sanyo', methods=['GET',])
@@ -47,6 +51,7 @@ def midea():
         return jsonify(status=RET.OK, partner='美的')
     else:
         return jsonify(status=RET.NODATA)
+
 
 @api.route('/spiders', methods=['GET', 'POST'])
 def spider_index():

@@ -37,14 +37,14 @@ window.onload = function () {
 	// var after = document.querySelector('.run .after');
 
     $.ajax({
-       url: '/api/v1_0/partners/sanyo',
+       url: '/api/v1_0/partners/tmall',
        type: 'get',
        dataType: 'json',
        success: function (info) {
            if (info.status == 0){
                $('.partner').html(info.partner);
            } else {
-               localtion.href = '/sanyo.html';
+               localtion.href = '/tmall.html';
            }
        }
     });

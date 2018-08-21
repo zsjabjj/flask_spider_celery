@@ -16,16 +16,13 @@ tamllList = list()
 @api.route('/tmalls', methods=['GET',])
 def tmalls():
     '''猫超进度条'''
-    
-    global tamllList
 
-    for i in range(len(tamllList), 150):
-        tamllList.append(i)
-
-        i = len(tamllList)* 100 // 150
-
+    i = 100 if 'tmall采集完成请导出' == redis_store.lindex("tmall", -1).decode('utf-8') else redis_store.llen('tmall') * 100 // 1600
+    # logging.info(i)
+    if i <= 100:
         return jsonify(time=i)
-    tamllList = list()
+    elif i > 100:
+        return jsonify(time=RET.DATAERR)
 
 @api.route('/sanyos', methods=['GET',])
 def sanyos():
