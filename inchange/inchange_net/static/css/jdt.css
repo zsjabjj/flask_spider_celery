@@ -1,0 +1,113 @@
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'microsoft yahei';
+}
+html,body {
+	width: 100%;
+	height: 100%;
+	/*background-color: #222;*/
+	background-color: #25003a;
+	/*overflow: hidden;*/
+}
+
+h4{
+	margin-top: -45px;
+	margin-left: 200px;
+	float: left;
+	color: white;
+
+}
+
+span{
+	color: red;
+}
+
+.load-container {
+	width: 600px;
+	height: 6px;
+	margin: 0 auto;
+	margin-top: 200px;
+	background-image: -webkit-linear-gradient(left,#5bd8ff, #ff0000);
+	border-radius: 5px;
+	position: relative;
+	z-index: 9999;
+}
+.run {
+	position: absolute;
+/*	width: 0px;*/
+	width: 100%;
+	height: 6px;
+	right: 0px;
+	background: #000;
+	border-radius: 5px;
+	/* animation: runnAnimation 10s linear; */
+}
+/* @keyframes runnAnimation {
+	0% {
+		width: 600px;
+	}
+	100% {
+		width: 0px;
+	}
+} */
+.run .after {
+	display: block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: #f00;
+	margin-left: -4px;
+	margin-top: -4px;
+/*	background-image: -webkit-linear-gradient(left,#5bd8ff, #ff0000);*/
+	/* animation: destination 10s linear; */
+}
+/* @keyframes destination {
+	0% {
+		background-color: #5bd8ff;
+	}
+	100% {
+		background-color: red;
+	}
+} */
+.meter {
+	float: right;
+	margin-top: 10px;
+	font-size: 40px;
+	color: red;
+	/* animation: fontColor 10s linear; */
+}
+/* @keyframes fontColor {
+	0% {
+		color: #5bd8ff;
+	}
+	100% {
+		color: red;
+	}
+} */
+.meter:after {
+	content: "%"
+}
+
+#ok{
+/*	margin-top: 20px;*/
+	color: white;
+	display: none;
+	text-indent: 55%;
+/*
+	position: relative;
+	z-index: 9999;
+*/
+}
+
+#app {
+	width: 100%;
+	height: 100%;
+}
+
+.up{
+	z-index: 9999;
+}
+
+

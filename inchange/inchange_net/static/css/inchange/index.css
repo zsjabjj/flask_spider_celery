@@ -1,0 +1,165 @@
+/* CSS Document */
+
+/*页面背景色*/
+body {
+	background-color: #808080
+}
+
+/*步骤，合作商，cookie，提交 div*/
+.up {
+	/*    text-align: center; 让div内部文字居中*/
+/*	background-color: #fff;*/
+/*	background-image: url('./2-01.eps');*/
+	border-radius: 20px;
+	width: 600px;
+	height: 700px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/*步骤*/
+.p {
+	margin: auto;
+	padding-left: 180px;
+	color: pink;
+}
+
+/*合作商*/
+h4 {
+	margin-left: 100px;
+	color: floralwhite;
+	font-size: 20px;
+}
+
+/*合作商div*/
+.radioPar {
+	margin-left: 180px;
+}
+
+/*合作商文字*/
+/*猫超*/
+.pName1 {
+	color: white;
+}
+/*三洋*/
+.pName2 {
+	color: firebrick;
+}
+/*美的*/
+.pName3 {
+	color: deepskyblue;
+}
+
+.recentDate, .diyDate, .pName {
+	color: aliceblue;
+}
+
+/*时间div*/
+.radioDay {
+	display: none;
+	margin-left: 180px;
+}
+
+/*时间输入div*/
+.input_date {
+	display: none;
+	margin-left: 180px;
+}
+
+/*cookie div*/
+.cookie {
+	margin-top: 20px;
+	margin-left: 100px;
+}
+
+/*cookie输入 文字*/
+#input_cookie {
+	float: left;
+	color: floralwhite;
+}
+
+/*cookie输入框*/
+#cookie_text {
+	width: 200px;
+	height: 250px;
+}
+
+/*提交按钮div*/
+#button {
+	margin-top: 25px;
+	text-align: center;
+}
+
+/*提交按钮输入*/
+#button input {
+	width: 80px;
+	height: 40px;
+	background-color: deepskyblue;
+	color: white;
+	border-radius: 12px;
+	font-size: 16px;
+}
+
+/* 模态 */
+/*背景覆盖*/
+.modal-sel {
+	width: 100%;
+	height: 100%;
+	background: #ccc;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	display: none;
+}
+
+/*模态提示框*/
+.window {
+	width: 300px;
+	height: 190px;
+	border: 1px solid #AAA;
+	background: #F1F1F1;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 99;
+	border-radius: 8px;
+	display: none;
+}
+
+/*模态提示框标题*/
+.window .title {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #AAA;
+	margin-top: -16px;
+}
+
+/*模态提示框标题内容*/
+.window .title p {
+	text-indent: 15px;
+}
+
+/*模态提示框内容*/
+.window .content {
+	width: 100%;
+	height: 110px;
+	border-bottom: 1px solid #AAA;
+	text-align: center;
+	line-height: 108px;
+	color: red;
+}
+
+/*模态提示框底部*/
+.window .foot {
+	float: right;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-right: 15px;
+}

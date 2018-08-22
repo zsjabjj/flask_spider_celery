@@ -1,0 +1,17 @@
+/* CSS Document */
+/*动画样式*/
+.hidden {
+	display: none;
+}
+
+#spring-text {
+	margin-top: 40px;
+	margin-left: -50px;
+	position: absolute;
+	top: 0px;
+/*	z-index: 9998;*/
+}
+
+.sanyo{
+	z-index: -1;
+}
