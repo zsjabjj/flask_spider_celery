@@ -57,8 +57,8 @@ class TmallSpider(object):
         # 建立一个存储列表, 用来存储pc端和无线端的数据
         self.pw_list = list()
         # 构建存储数据列表
-        self._list = list()
-        self._list.append('tmall开始采集')
+        # self._list = list()
+        # self._list.append('tmall开始采集')
         try:
             redis_store.rpush('tmall', 'tmall开始采集')
         except:
@@ -94,9 +94,7 @@ class TmallSpider(object):
             # request.headers['proxy'] = 'http://{}'.format(ip)
             proxies = {"http": "http://{}".format(ip)}
             data_dict = self.url_queue.get()
-            logging.info('__________________________')
-            logging.info(data_dict['mark'])
-            logging.info('===========================')
+
             self.headers['User-Agent'] = random.choice(constants.MY_USER_AGENT_PC)
             # 品牌list
             if 'brandList' == data_dict['mark']:
@@ -120,12 +118,10 @@ class TmallSpider(object):
             # 添加json数据
             data_dict['jsonp'] = jsonp
             if 'trend' == data_dict['mark'] or 'srcflow' == data_dict['mark']:
-                logging.info('data_queue')
-                logging.info(data_dict['mark'])
+
                 self.data_queue.put(data_dict)
             else:
-                logging.info('resp_queue')
-                logging.info(data_dict['mark'])
+
                 self.resp_queue.put(data_dict)
             self.url_queue.task_done()
 
@@ -186,7 +182,7 @@ class TmallSpider(object):
                         del data['jsonp']
                         del data['url']
                         del data['mark']
-                        logging.info(data)
+
                         for _, ctmall in enumerate(ctmall_list):
                             trend_dict = dict()
                             srcflow_dict1 = dict()
@@ -211,9 +207,9 @@ class TmallSpider(object):
                             trend_dict['device_category'] = data['device_category']
                             trend_dict['url'] = url_trend
                             trend_dict['mark'] = 'trend'
-                            logging.info('trend insert')
+
                             self.url_queue.put(trend_dict)
-                            logging.info('-=-==-=-=-=-=-=-=-=-=-')
+
 
                             # 请求流量数据
 
@@ -275,16 +271,14 @@ class TmallSpider(object):
         '''第二次解析，流量和趋势数据'''
         while self.data_queue.not_empty:
             data = self.data_queue.get()
-            logging.info('------------------')
-            # logging.info(data)
-            logging.info('+++++++++++++++++++')
+
             # 判断返回数据是否正确
             if 'hasError' not in data['jsonp']:
                 logging.error('may be cookie error')
             # 曲线趋势
             elif 'trend' == data['mark']:
                 # 转化率
-                logging.info('曲线趋势')
+
                 payByrRateIndexList = data['jsonp']['content']['data']['payByrRateIndexList']
                 # 支付订单数
                 payOrdCntList = data['jsonp']['content']['data']['payOrdCntList']
@@ -307,8 +301,9 @@ class TmallSpider(object):
                         item['date_time'] = (datetime.date.today() - datetime.timedelta(days=_1 - num)).strftime('%Y-%m-%d')
                         item['total'] = _1
                         item['num'] = num
-
-                        self._list.append(item)
+                        # del item['jsonp']
+                        # del item['url']
+                        # self._list.append(item)
                         logging.info('trend ok')
                         redis_store.rpush('tmall', item)
                     self.data_queue.task_done()
@@ -324,17 +319,15 @@ class TmallSpider(object):
                         item['total'] = min(_1, _2, _3)
                         item['num'] = num
 
-                        self._list.append(item)
+                        # self._list.append(item)
                         logging.info('trend ok')
                         redis_store.rpush('tmall', item)
                     self.data_queue.task_done()
 
             # 流量
             elif 'srcflow' == data['mark']:
-                logging.info('流量')
                 # pc端
 
-                # logging.info(data)
                 if 1 == data['i']:
                     pc_list = data['jsonp']['content']['data']
                     pc_dict = dict()
@@ -369,9 +362,10 @@ class TmallSpider(object):
                             item['wifi'] = pw_no['wifi']
                             self.pw_list.pop(self.pw_list.index(pw))
                             self.pw_list.pop(self.pw_list.index(pw_no))
-
-                            self._list.append(item)
-
+                            # del item['url']
+                            # del item['jsonp']
+                            # self._list.append(item)
+                            logging.info('srcflow ok')
                             redis_store.rpush('tmall', item)
 
                         elif 'wifi' in pw and 'pc' in pw_no and pw['modelName'] == pw_no['modelName']:
@@ -379,9 +373,10 @@ class TmallSpider(object):
                             item['pc'] = pw_no['pc']
                             self.pw_list.pop(self.pw_list.index(pw))
                             self.pw_list.pop(self.pw_list.index(pw_no))
-
-                            self._list.append(item)
-
+                            # del item['url']
+                            # del item['jsonp']
+                            # self._list.append(item)
+                            logging.info('srcflow ok')
                             redis_store.rpush('tmall', item)
                 self.data_queue.task_done()
 
@@ -431,10 +426,11 @@ class TmallSpider(object):
         logging.info('data queue ok')
 
 
-        self._list.append('tmall采集完成请导出')
+        # self._list.append('tmall采集完成请导出')
         redis_store.rpush('tmall', 'tmall采集完成请导出')
 
-        return self._list
+        # return self._list
+        return
 
 
 if __name__ == '__main__':

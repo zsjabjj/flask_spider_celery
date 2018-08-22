@@ -5,6 +5,7 @@ from inchange_net.utils.midea.mideaSpider import MideaSpider
 from inchange_net.utils.midea.save_midea import SaveMidea
 from inchange_net.utils.sanyo.brand_ratio import BrandRatio
 from inchange_net.utils.sanyo.save_ratio import SaveRatio
+from inchange_net.utils.tmall.save_tmall import SaveTmall
 from inchange_net.utils.tmall.tmallSpider import TmallSpider
 
 
@@ -18,7 +19,7 @@ def sanyo_spider(Cookie, date_time, date_type):
 def tmall_spider(Cookie, date_time, date_type):
     '''tmall数据抓取and存储'''
     TmallSpider(Cookie, date_time, date_type).run()
-    pass
+    SaveTmall(date_time).save_tmall_data()
 
 @celery_task.task(name='midea_spider')
 def midea_spider(Cookie, date_time, date_type):

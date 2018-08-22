@@ -26,15 +26,52 @@ function file_page() {
     });
 }
 
+function bars() {
 
+    var meter = document.querySelector('.meter');
+    var ok = document.querySelector('#ok');
+    var run = document.querySelector('.run');
+    //每隔一段时间请求一次后台
+
+    var timeid = setInterval(function () {
+//    if (partner.innerHTML === '猫超'){
+//		alert(partner.innerHTML);
+        $.ajax({
+
+            url: '/api/v1_0/tmalls', //请求后台地址
+            type: 'get', //请求方式
+            dataType: 'json', //后台返回数据格式json
+            success: function (info) {
+                // console.log(info.time);
+                run.style.width = (100 - info.time) + '%';
+                meter.innerHTML = info.time;
+                // console.log(run.style.width);
+                // console.log(meter.innerHTML);
+                // alert(info.time);
+                if (info.time == 100) {
+                    //改变小圆点span-after的背景颜色
+
+                    // after.style.backgroundColor = 'red';
+                    clearInterval(timeid);
+                    $(ok).show();
+                } else if (info.time == 4004) {
+                    location.href = '/api/v1_0/spiders';  // 当前窗口打开
+                } else {
+                    // after.style.backgroundColor = '#5bd8ff';
+                    $(ok).hide(); //隐藏白色文字
+                }
+            }
+        });
+    }, 1000);
+}
 
 window.onload = function () {
 	'use strict';
-	var meter = document.querySelector('.meter');
-	var ok = document.querySelector('#ok');
-	var run = document.querySelector('.run');
-  	var partner = document.querySelector('.partner');
-	// var after = document.querySelector('.run .after');
+	// var meter = document.querySelector('.meter');
+	// var ok = document.querySelector('#ok');
+	// var run = document.querySelector('.run');
+  	// var partner = document.querySelector('.partner');
+	// // var after = document.querySelector('.run .after');
 
     $.ajax({
        url: '/api/v1_0/partners/tmall',
@@ -43,6 +80,7 @@ window.onload = function () {
        success: function (info) {
            if (info.status == 0){
                $('.partner').html(info.partner);
+               bars();
            } else {
                localtion.href = '/tmall.html';
            }
@@ -53,33 +91,33 @@ window.onload = function () {
 
 	//每隔一段时间请求一次后台
 
-	var timeid = setInterval(function () {
-//    if (partner.innerHTML === '猫超'){
-//		alert(partner.innerHTML);
-      $.ajax({
-
-    url: '/api/v1_0/tmalls', //请求后台地址
-    type: 'get', //请求方式
-    dataType: 'json', //后台返回数据格式json
-    success: function (info) {
-      run.style.width = (100 - info.time) + '%';
-      meter.innerHTML = info.time;
-      // alert(info.time);
-      if (info.time == 100) {
-        //改变小圆点span-after的背景颜色
-        
-        // after.style.backgroundColor = 'red';
-        clearInterval(timeid);
-        $(ok).show();
-      } else if (info.time == 400){
-        location.href = '/api/v1_0/spiders';  // 当前窗口打开
-      } else {
-        // after.style.backgroundColor = '#5bd8ff';
-        $(ok).hide(); //显示白色文字
-      }
-    }
-  });
-    }, 1000); 
+// 	var timeid = setInterval(function () {
+// //    if (partner.innerHTML === '猫超'){
+// //		alert(partner.innerHTML);
+//       $.ajax({
+//
+//     url: '/api/v1_0/tmalls', //请求后台地址
+//     type: 'get', //请求方式
+//     dataType: 'json', //后台返回数据格式json
+//     success: function (info) {
+//       run.style.width = (100 - info.time) + '%';
+//       meter.innerHTML = info.time;
+//       // alert(info.time);
+//       if (info.time == 100) {
+//         //改变小圆点span-after的背景颜色
+//
+//         // after.style.backgroundColor = 'red';
+//         clearInterval(timeid);
+//         $(ok).show();
+//       } else if (info.time == 400){
+//         location.href = '/api/v1_0/spiders';  // 当前窗口打开
+//       } else {
+//         // after.style.backgroundColor = '#5bd8ff';
+//         $(ok).hide(); //显示白色文字
+//       }
+//     }
+//   });
+//     }, 1000);
 (function() {
 	
   var canvas, ctx, circ, nodes, mouse, SENSITIVITY, SIBLINGS_LIMIT, DENSITY, NODES_QTY, ANCHOR_LENGTH, MOUSE_RADIUS;
